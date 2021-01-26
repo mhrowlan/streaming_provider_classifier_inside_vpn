@@ -13,7 +13,7 @@ import logging
 
 from src.utils import ensure_path_exists
 
-DATA_DIRECTORY = "/teams/DSC180A_FA20_A00/b05vpnxray/data/unzipped"
+DATA_DIRECTORY = "/teams/DSC180A_FA20_A00/b05vpnxray/group2_data/data"
 # network-stats records per-packet timing in milliseconds,
 PACKET_TIMESTAMP_UNIT = 'ms'
 
