@@ -61,15 +61,28 @@ def engineer_features(
     received_large = df[(df['dir']==2) & (df['size'] > 1200)]
     received_small = df[(df['dir']==2) & (df['size'] < 200)]
     
-    #ratio of large, uploaded packets over all uploaded packets 
-    sent_large_prop = len(sent_large) / len(df[(df['dir']==1)])
-    #ratio of small, uploaded packets over all uploaded packets
-    sent_small_prop = len(sent_small) / len(df[(df['dir']==1)])
-    #ratio of large, downloaded packets over all downloaded packets
-    received_large_prop = len(received_large) / len(df[(df['dir']==2)])
-    #ratio of small, downloaded packets over all downloaded packets
-    received_small_prop = len(received_small) / len(df[(df['dir']==2)])
-    
+    try:
+        #ratio of large, uploaded packets over all uploaded packets 
+        sent_large_prop = len(sent_large) / len(df[(df['dir']==1)])
+    except:
+        sent_large_prop = 0
+    try:
+        #ratio of small, uploaded packets over all uploaded packets
+        sent_small_prop = len(sent_small) / len(df[(df['dir']==1)])
+    except:
+        sent_small_prop = 0 
+        
+    try:
+        #ratio of large, downloaded packets over all downloaded packets
+        received_large_prop = len(received_large) / len(df[(df['dir']==2)])
+    except:
+        received_large_prop = 0
+    try:
+        #ratio of small, downloaded packets over all downloaded packets
+        received_small_prop = len(received_small) / len(df[(df['dir']==2)])
+    except:
+        received_small_prop = 0
+
     
     #interpacket delay
     df['ip_delay'] = df.index.to_series().diff().dt.total_seconds() * 1000

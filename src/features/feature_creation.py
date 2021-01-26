@@ -14,12 +14,19 @@ def split(filename, chunk_size):
         'netflix': 2,
     }
     if 'mhrowlan' in filename:
-        provider = streaming_providers[filename.split('-')[1]]
+        provider = filename.split('-')[2]
+        print(provider)
+        provider_int = streaming_providers[filename.split('-')[2]] 
+        if provider not in streaming_providers.keys():
+            provider_int = 3
+        print(provider_int)
     else:
-        provider = streaming_providers[filename.split('_')[1]]
-    
-    if provider not in streaming_providers.keys():
-        provider = 3
+        provider = filename.split('_')[1]
+        print(provider)
+        provider_int = streaming_providers[filename.split('_')[1]]
+        if provider not in streaming_providers.keys():
+            provider_int = 3
+        print(provider_int)
 
     df = pd.read_csv(filename)
     start = df['time'].values[0]-1
@@ -28,7 +35,7 @@ def split(filename, chunk_size):
     df['binned'] = pd.cut(df['time'], bins)
     all_dfs = []
     for key, split_df in df.groupby('binned'):
-        all_dfs.append((provider, split_df))
+        all_dfs.append((provider_int, split_df))
     return all_dfs
 
 #Streaming longest streak of direction 1 and 2 packets
