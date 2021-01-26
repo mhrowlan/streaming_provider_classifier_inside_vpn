@@ -8,20 +8,18 @@ def split(filename, chunk_size):
     """
 
     # On uncleaned filenames:
-    streaming_providers = [
-        "youtube", "hbomax", "disneyplus", "canvas", "amazonprime", "hulu",
-        "vimeo", "netflix", "espnplus", "streaming"
-    ]
-    browsing_words = [
-        "novideo", "nostream", "general", "browsing", 
-    ]
-    is_streaming = bool(re.search('|'.join(streaming_providers), filename.lower()))
-    is_browsing = bool(re.search('|'.join(browsing_words), filename.lower()))
-
-    # A file can't be both streaming and browsing, and it can't be neither!
-    if (is_streaming and is_browsing) or not (is_streaming or is_browsing):
-        raise Exception(f'Filename {filename} unclear.')
-
+    streaming_providers = {
+        'youtube' : 0,
+        'amazonprime': 1,
+        'netflix': 2,
+    }
+    if 'mhrowlan' in filename:
+        provider = streaming_providers[filename.split('-')[1]]
+    else:
+        provider = streaming_providers[filename.split('_')[1]]
+    
+    if provider not in streaming_providers.keys():
+        provider = 3
 
     df = pd.read_csv(filename)
     start = df['time'].values[0]-1
@@ -30,7 +28,7 @@ def split(filename, chunk_size):
     df['binned'] = pd.cut(df['time'], bins)
     all_dfs = []
     for key, split_df in df.groupby('binned'):
-        all_dfs.append((int(is_streaming), split_df))
+        all_dfs.append((provider, split_df))
     return all_dfs
 
 #Streaming longest streak of direction 1 and 2 packets

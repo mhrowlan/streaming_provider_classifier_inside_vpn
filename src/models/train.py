@@ -20,8 +20,8 @@ def train_model(source, out, validation_size, classifier, model_params):
     """
 
     df = pd.read_csv(source)
-    X = df.drop(columns=['streaming']).values
-    y = df['streaming'].values
+    X = df.drop(columns=['provider']).values
+    y = df['provider'].values
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=validation_size)
 

@@ -148,7 +148,7 @@ def create_features(source_dir, out_dir, out_file, chunk_size, rolling_window_1,
         'received_longest_streak',
         'max_frequency_prominence',
 
-        'streaming'
+        'provider'
     ]
 
 
