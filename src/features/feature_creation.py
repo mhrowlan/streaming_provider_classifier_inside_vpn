@@ -15,18 +15,19 @@ def split(filename, chunk_size):
     }
     if 'mhrowlan' in filename:
         provider = filename.split('-')[2]
-        print(provider)
-        provider_int = streaming_providers[filename.split('-')[2]] 
+        
         if provider not in streaming_providers.keys():
             provider_int = 3
-        print(provider_int)
+        else:
+            provider_int = streaming_providers[filename.split('-')[2]] 
+        print(provider + ' ' + str(provider_int))
     else:
         provider = filename.split('_')[1]
-        print(provider)
-        provider_int = streaming_providers[filename.split('_')[1]]
         if provider not in streaming_providers.keys():
             provider_int = 3
-        print(provider_int)
+        else:
+            provider_int = streaming_providers[filename.split('_')[1]]
+        print(provider + ' ' + str(provider_int))
 
     df = pd.read_csv(filename)
     start = df['time'].values[0]-1

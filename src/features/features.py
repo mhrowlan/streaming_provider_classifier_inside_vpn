@@ -26,7 +26,7 @@ def engineer_features(
     df, label, rolling_window_1, rolling_window_2, resample_rate,
     frequency
     ):
-
+    print(label)
     df['dt_time'] = pd.to_timedelta(df['dt_time'])
     df = df.set_index('dt_time')
     df = df.drop(columns=['binned'])
