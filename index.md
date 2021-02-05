@@ -1,13 +1,9 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Classifying Streaming Providers inside a VPN
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Test!
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+### When might this information be used?
+When it comes to classifying which streaming service provider is being used in a VPN, there are many reasons to collect it. In working with Viasat, their goal as an Internet Service Provider is to offer the best quality experience for their customers. So if they set certain network parameters in place, such as max download rates, certain providers could be more heavily affected. By studying the network patterns of some different service providers and making a tool to classify them, this information can be used to help tune network parameters to optimize streaming for their clients. 
 ```markdown
 Syntax highlighted code block
 
