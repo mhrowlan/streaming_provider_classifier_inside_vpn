@@ -28,16 +28,16 @@ def main(targets):
     with open(Path(config_dir, 'logging.json')) as f:
         logging_params = json.load(f)
 
-    if logging_params['produce_logs']:
-        log_file = logging_params['log_file']
-        ensure_path_exists(log_file)
-        logging.basicConfig(
-            filename=log_file, filemode='a',
-            format='%(asctime)s, %(name)s %(levelname)s %(message)s',
-            datefmt='%H:%M:%S',
-            level=logging.DEBUG
-        )
-        logging.info(f"{'*'*80}\nBEGIN RUN\n{'*'*80}")
+#     if logging_params['produce_logs']:
+#         log_file = logging_params['log_file']
+#         ensure_path_exists(log_file)
+#         logging.basicConfig(
+#             filename=log_file, filemode='a',
+#             format='%(asctime)s, %(name)s %(levelname)s %(message)s',
+#             datefmt='%H:%M:%S',
+#             level=logging.DEBUG
+#         )
+#         logging.info(f"{'*'*80}\nBEGIN RUN\n{'*'*80}")
 
     # Regardless of if a logfile is being collected, we should also get the logs
     # to show up in standard out.
