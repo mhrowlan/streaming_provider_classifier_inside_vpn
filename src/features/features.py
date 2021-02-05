@@ -26,7 +26,7 @@ def engineer_features(
     df, label, rolling_window_1, rolling_window_2, resample_rate,
     frequency
     ):
-    print(label)
+    print('beginning features for ' + str(label))
     df['dt_time'] = pd.to_timedelta(df['dt_time'])
     df = df.set_index('dt_time')
     df = df.drop(columns=['binned'])
@@ -105,26 +105,50 @@ def engineer_features(
     rolling_delays_60 = roll(df, 'ip_delay', int(rolling_window_2/1000))['mean'].mean()
     
     #longest streaks
-    streak_sent = longest_dir_streak(df['dir'], 1)
-    streak_received = longest_dir_streak(df['dir'], 2)
+    #streak_sent = longest_dir_streak(df['dir'], 1)
+    #streak_received = longest_dir_streak(df['dir'], 2)
     
-    features = [bytes_ratio,
-                count_ratio,
+    #----------GROUP FEATURES-----------
+    #Arely's
+    #ft1: ratio of (number of packet sizes from 0-200 size)/(number of all packets)
+    ft1 = len(df[(df['size'] <200)]) / len(df)
+    #ft2: ratio of (upload packet sizes in range [200-400])/(number of all packets)
+    ft2 = len(df[(df['size'] >200) & (df['size'] <400)]) / len(df)
+    #ft3: ratio of (number of pksize >1200)/ (number of all packets)
+    ft3 = len(df[(df['size'] >1200)]) / len(df)
+    
+    #Molly's
+    #sent_bytes_mean = df[df['dir'] == 1]['size'].mean()
+    #received_bytes_mean = df[df['dir'] == 2]['size'].mean()
+    
+    #Chang's
+    download_bytes_cv = np.std(df[df['dir'] == 2]['size']) / np.mean(df[df['dir'] == 2]['size'])
+    upload_bytes_cv = np.std(df[df['dir'] == 1]['size']) / np.mean(df[df['dir'] == 1]['size'])
+    
+    features = [#bytes_ratio,
+                #count_ratio,
                 rolling_delays_10,
                 rolling_delays_60,
                 received_mean_size,
                 sent_mean_size,
-                sent_large_prop,
+                #sent_large_prop,
                 sent_small_prop,
                 received_large_prop,
                 received_small_prop,
-                streak_sent,
-                streak_received,
+                #streak_sent,
+                #streak_received,
                 df_max_prom,
+                ft1,
+                ft2,
+                ft3,
+                #sent_bytes_mean,
+                #received_bytes_mean,
+                download_bytes_cv,
+                upload_bytes_cv,
                 
                 label
             ]
-
+    print('finished features for ' + str(label))
     return features
 
 def create_features(source_dir, out_dir, out_file, chunk_size, rolling_window_1, rolling_window_2, resample_rate, frequency):
@@ -146,21 +170,38 @@ def create_features(source_dir, out_dir, out_file, chunk_size, rolling_window_1,
     
     #the actual dataframes
     merged_dfs = [m[1] for m in merged]
+#     cols = [
+#         'bytes_sr_ratio',
+#         'count_sr_ratio',
+#         'smoothed_mean_delay_10s',
+#         'smoothed_mean_delay_60s',
+#         'received_mean_size',
+#         'sent_mean_size',
+#         'sent_large_prop',
+#         'sent_small_prop',
+#         'received_large_prop',
+#         'received_small_prop',
+#         'sent_longest_streak',
+#         'received_longest_streak',
+#         'max_frequency_prominence',
+
+#         'provider'
+#     ]
+    
     cols = [
-        'bytes_sr_ratio',
-        'count_sr_ratio',
         'smoothed_mean_delay_10s',
         'smoothed_mean_delay_60s',
         'received_mean_size',
         'sent_mean_size',
-        'sent_large_prop',
         'sent_small_prop',
         'received_large_prop',
         'received_small_prop',
-        'sent_longest_streak',
-        'received_longest_streak',
         'max_frequency_prominence',
-
+        'ft1',
+        'ft2',
+        'ft3',
+        'download_bytes_cv',
+        'upload_bytes_cv',
         'provider'
     ]
 
@@ -173,7 +214,7 @@ def create_features(source_dir, out_dir, out_file, chunk_size, rolling_window_1,
 
     workers = multiprocessing.cpu_count()
     # print(f'Starting a processing pool of {workers} workers.')
-    logging.info(f'Starting a processing pool of {workers} workers.')
+    logging.info(f'Starting a processing pool of {workers} workers')
     start = time.time()
     pool = multiprocessing.Pool(processes=workers)
     results = pool.map(_engineer_features, args)
