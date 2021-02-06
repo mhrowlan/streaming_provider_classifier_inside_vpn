@@ -19,7 +19,7 @@ PACKET_TIMESTAMP_UNIT = 'ms'
 
 
 def clean(df):
-    print(df)
+    print(df.shape)
     """
     Attempts to filter out everything besides the traffic flow between the
     client and VPN service.
@@ -49,14 +49,19 @@ def clean(df):
         (ip1.map(lambda x: x.is_private))
         & (ip2.map(lambda x: x.is_private))
     )
-
+    print(df[
+        ~either_link_local
+        & ~either_multicast
+        & ~both_private
+    ].shape)
+    
     return df[
         ~either_link_local
         & ~either_multicast
         & ~both_private
     ]
 
-    print(df)
+    print(df.shape)
 
 def unbin(df):
     """
