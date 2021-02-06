@@ -49,21 +49,11 @@ def clean(df):
         (ip1.map(lambda x: x.is_private))
         & (ip2.map(lambda x: x.is_private))
     )
-#     print(df[
-#         ~either_link_local
+
+#     print("new shape: ")
+#     print(df[~either_link_local
 #         & ~either_multicast
-#         & ~both_private
-#     ].shape)
-    
-#     return df[
-#         ~either_link_local
-#         & ~either_multicast
-#         & ~both_private
-#     ]
-    print("new shape: ")
-    print(df[~either_link_local
-        & ~either_multicast
-        & ~both_private].shape)
+#         & ~both_private].shape)
     
    
     return df[~either_link_local
