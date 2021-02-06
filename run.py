@@ -74,10 +74,10 @@ def main(targets):
         with open(Path(config_dir, 'data-params.json'), 'r') as f:
             data_params = json.load(f)
 
-        # print('Running ETL pipeline.')
+        print('Running ETL pipeline.')
         logging.info('Running ETL pipeline.')
         preprocess_data(**data_params)
-        # print('ETL pipeline complete.')
+        print('ETL pipeline complete.')
         logging.info('ETL pipeline complete.')
 
     if 'features' in targets or run_all:
