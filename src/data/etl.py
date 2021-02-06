@@ -35,10 +35,10 @@ def clean(df):
 
     ip1, ip2 = df.IP1.map(ipaddress.ip_address), df.IP2.map(ipaddress.ip_address)
 
-    either_link_local = (
-        (ip1.map(lambda x: x.is_link_local))
-        | (ip2.map(lambda x: x.is_link_local))
-    )
+#     either_link_local = (
+#         (ip1.map(lambda x: x.is_link_local))
+#         | (ip2.map(lambda x: x.is_link_local))
+#     )
 
     either_multicast = (
         (ip1.map(lambda x: x.is_multicast))
@@ -49,15 +49,19 @@ def clean(df):
         (ip1.map(lambda x: x.is_private))
         & (ip2.map(lambda x: x.is_private))
     )
-    print(df[
-        ~either_link_local
-        & ~either_multicast
-        & ~both_private
-    ].shape)
+#     print(df[
+#         ~either_link_local
+#         & ~either_multicast
+#         & ~both_private
+#     ].shape)
     
+#     return df[
+#         ~either_link_local
+#         & ~either_multicast
+#         & ~both_private
+#     ]
     return df[
-        ~either_link_local
-        & ~either_multicast
+        ~either_multicast
         & ~both_private
     ]
 
