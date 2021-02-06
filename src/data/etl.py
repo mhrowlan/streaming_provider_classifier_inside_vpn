@@ -60,7 +60,9 @@ def clean(df):
 #         & ~either_multicast
 #         & ~both_private
 #     ]
-    print(df[~both_private])
+    print("new shape: ")
+    print(df[~both_private].shape)
+    
    
     return df[~both_private]
 
