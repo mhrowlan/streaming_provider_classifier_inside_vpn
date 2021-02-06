@@ -37,7 +37,7 @@ def main(targets):
             datefmt='%H:%M:%S',
             level=logging.DEBUG
         )
-       # logging.info(f"{'*'*80}\nBEGIN RUN\n{'*'*80}")
+        logging.info(f"{'*'*80}\nBEGIN RUN\n{'*'*80}")
 
     # Regardless of if a logfile is being collected, we should also get the logs
     # to show up in standard out.
