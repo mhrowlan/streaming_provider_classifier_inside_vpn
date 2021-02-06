@@ -19,6 +19,7 @@ PACKET_TIMESTAMP_UNIT = 'ms'
 
 
 def clean(df):
+    print(df)
     """
     Attempts to filter out everything besides the traffic flow between the
     client and VPN service.
@@ -54,6 +55,8 @@ def clean(df):
         & ~either_multicast
         & ~both_private
     ]
+
+    print(df)
 
 def unbin(df):
     """
