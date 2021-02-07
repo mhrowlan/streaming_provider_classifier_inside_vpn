@@ -6,28 +6,30 @@ def split(filename, chunk_size):
     """
     Splits each dataset into chunk_size chunks
     """
-
     # On uncleaned filenames:
     streaming_providers = {
         'youtube' : 0,
         'amazonprime': 1,
         'netflix': 2,
+        'youtube-live': 3,
+        'twitch-live': 4
     }
-    if 'mhrowlan' in filename:
-        provider = filename.split('-')[2]
-        
-        if provider not in streaming_providers.keys():
-            provider_int = 3
+   
+    if 'live' in filename:
+        if 'twitch' in filename:
+            provider_int = streaming_providers['twitch-live']
+        if 'youtube' in filename:
+            provider_int = streaming_providers['youtube-live']
+    if 'live' not in filename:
+        if 'youtube' in filename:
+            provider_int = streaming_providers['youtube']
+        if 'amazonprime' in filename:
+            provider_int = streaming_providers['amazonprime']
+        if 'netflix' in filename:
+            provider_int = streaming_providers['netflix']
         else:
-            provider_int = streaming_providers[filename.split('-')[2]] 
-        print(provider + ' ' + str(provider_int))
-    else:
-        provider = filename.split('_')[1]
-        if provider not in streaming_providers.keys():
-            provider_int = 3
-        else:
-            provider_int = streaming_providers[filename.split('_')[1]]
-        print(provider + ' ' + str(provider_int))
+            provider_int = -1
+    print(filename + ': ' + str(provider_int))
 
     df = pd.read_csv(filename)
     start = df['time'].values[0]-1
