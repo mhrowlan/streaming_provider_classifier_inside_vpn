@@ -19,7 +19,7 @@ PACKET_TIMESTAMP_UNIT = 'ms'
 
 
 def clean(df):
-    print(df.shape)
+    
     """
     Attempts to filter out everything besides the traffic flow between the
     client and VPN service.
