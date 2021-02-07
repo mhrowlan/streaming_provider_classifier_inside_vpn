@@ -93,7 +93,7 @@ def _process_file(args):
     """
     Helper to pass multiple arguments during a multiprocessing map.
     """
-    print(arg)
+    print(args)
     try:
         return process_file(*args)
     except Exception as e:
