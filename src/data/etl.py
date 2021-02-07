@@ -128,6 +128,7 @@ def process_file(filepath, out_dir):
     # Finally, save the preprocessed file.
     print("saving")
     df.to_csv(pathlib.Path(out_dir, 'preprocessed-'+filepath.name))
+    print(df)
 
     return True
 
