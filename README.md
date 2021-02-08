@@ -6,7 +6,6 @@
 - [Running](#running)
   - [Setup](#setup)
   - [Logging](#logging)
-  - [Target `generate`](#target-generate)
   - [Target `data`](#target-data)
   - [Target `features`](#target-features)
   - [Target `train`](#target-train)
@@ -34,11 +33,11 @@ To leverage the existing dataset, you must be a member of DSMLP and have access 
 
 Log on to DSMLP via `ssh <username>@dsmlp-login.ucsd.edu`
 
-Launch a Docker container with the necessary components via `launch-180.sh -i jeq004/viasat-replication -G B05_VPN_XRAY`
+Launch a Docker container with the necessary components via `launch-180.sh -i jeq004/streaming_provider_classifier_inside_vpn -G B05_VPN_XRAY`
 
-Clone this repository: `git clone https://github.com/JerryQian7/viasat-replication.git`
+Clone this repository: `git clone https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn.git`
 
-Navigate to this repository `cd viasat-replication`
+Navigate to this repository `cd streaming_provider_classifier_inside_vpn`
 
 Now, you are ready to configure targets for our project build. Details are specified below.
 
@@ -49,26 +48,6 @@ Logging behavior can be configured in `config/logging.json`.
 | --- | --- |
 | produce_logs | Boolean. Whether or not to write to the log file. Default: `true` |
 | log_file | Path to the log file. Default: `data/logs/project_run.log` |
-
-### Target `generate`
-
-Uses [`network-stats`](https://github.com/Viasat/network-stats) to collect your local machine's network activity for use in training. Labels must be provided via configuration.
-
-**Note:** This target is being deprecated in favor of a dedicated codebase for consistent data generation.
-
-See `config/generate-params.json` for configuration:
-| Key | Description |
-| --- | --- |
-| username | Your UCSD username |
-| provider | The streaming provider, e.g. "youtube". If browsing, specify "browsing". |
-| quality | The video quality, e.g. "1080p". If browsing, specify null. |
-| speed | The video speed,, e.g. "2x". If browsing, specify null. |
-| vpn | A string detailing whether or not a VPN was used while collecting data. Either "vpn" or "novpn". |
-| platform | The operating system, e.g. "mac" |
-| clean | A string detailing whether streaming was the only activity, or if other activity may have been captured. Either "clean" or "dirty". If browsing, specify null. |
-| interface | The network interface to collect data from. See network-stats documentation. |
-
-Press `Ctrl-C` in the terminal to stop data generation.
 
 ### Target `data`
 

@@ -19,6 +19,7 @@ PACKET_TIMESTAMP_UNIT = 'ms'
 
 
 def clean(df):
+    
     """
     Attempts to filter out everything besides the traffic flow between the
     client and VPN service.
@@ -49,11 +50,17 @@ def clean(df):
         & (ip2.map(lambda x: x.is_private))
     )
 
-    return df[
-        ~either_link_local
+#     print("new shape: ")
+#     print(df[~either_link_local
+#         & ~either_multicast
+#         & ~both_private].shape)
+    
+   
+    return df[~either_link_local
         & ~either_multicast
-        & ~both_private
-    ]
+        & ~both_private]
+
+    
 
 def unbin(df):
     """
@@ -86,6 +93,7 @@ def _process_file(args):
     """
     Helper to pass multiple arguments during a multiprocessing map.
     """
+    
     try:
         return process_file(*args)
     except Exception as e:
@@ -104,19 +112,24 @@ def process_file(filepath, out_dir):
     df = pd.read_csv(filepath)
     
     # Filter out irrelevant traffic
+    
     df = clean(df)
 
     # Extract packet-level data
+   
     df = unbin(df)
     
     # Set the index to timedelta (should be monotonic increasing)
+  
     df.columns = ['time', 'size', 'dir'] # NOTE: Renaming to match existing code
     df = df.sort_values('time')
     df['dt_time'] = pd.to_timedelta(df.time - df.time[0], PACKET_TIMESTAMP_UNIT)
     df = df.set_index('dt_time')
 
     # Finally, save the preprocessed file.
+
     df.to_csv(pathlib.Path(out_dir, 'preprocessed-'+filepath.name))
+
 
     return True
 
