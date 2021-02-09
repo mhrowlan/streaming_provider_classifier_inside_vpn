@@ -2,27 +2,26 @@
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+# Research Question: Can we identify what streaming service provider is being used across a VPN tunnel? How does adding live video affect the model classification? 
+
 ### When might this information be used?
 When it comes to classifying which streaming service provider is being used in a VPN, there are many reasons to collect it. In working with Viasat, their goal as an Internet Service Provider is to offer the best quality experience for their customers. So if they set certain network parameters in place, such as max download rates, certain providers could be more heavily affected. By studying the network patterns of some different service providers and making a tool to classify them, this information can be used to help tune network parameters to optimize streaming for their clients. 
+
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Key Terms!
+- Virtual Private Network (VPN): creates a private network across a public network
+- Packet: formatted unit of data carrying information on where to send data and the payload of data
+- Byte: data contained in the packet, group of 8 bits 
+- Live video: video that is being created and streamed at the same time
+- Video on Demand: video that is created and stored on a server accessible at a later time 
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+
 
 [Link](url) and ![Image](src)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
