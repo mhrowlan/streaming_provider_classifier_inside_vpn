@@ -42,7 +42,10 @@ what is the data we are collecting and using
 ### Other
 
 ## Comparing the Providers
-compare different providers
+compare different providers ie Netflix vs youtube vs amazon prime vs other
+amazon prime vs twitch
+youtube live vs twitch
+twitch vs youtube live
 
 ## The Classifier 
 what classifier, features, accuracy 
