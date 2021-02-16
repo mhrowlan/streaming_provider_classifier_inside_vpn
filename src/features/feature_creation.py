@@ -21,14 +21,14 @@ def split(filename, chunk_size):
         if 'youtube' in filename:
             provider_int = streaming_providers['youtube-live']
     if 'live' not in filename:
+        provider_int = -1
         if 'youtube' in filename:
             provider_int = streaming_providers['youtube']
         if 'amazonprime' in filename:
             provider_int = streaming_providers['amazonprime']
         if 'netflix' in filename:
             provider_int = streaming_providers['netflix']
-        else:
-            provider_int = -1
+            
     print(filename + ': ' + str(provider_int))
 
     df = pd.read_csv(filename)
