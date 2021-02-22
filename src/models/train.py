@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -7,6 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import plot_confusion_matrix
 
 import pickle
 
@@ -48,6 +50,27 @@ def train_model(source, out, validation_size, classifier, model_params):
     print(y_pred, y_test)
     # print('%s model accuracy: %s' % (classifier, accuracy))
     logging.info('%s model accuracy: %s' % (classifier, accuracy))
+    
+    # Plot non-normalized confusion matrix
+    class_names = ['other', 'youtube', 'prime', 'netflix', 'yt-live', 'twitch']
+    
+    disp = plot_confusion_matrix(clf, X_test, y_test,
+                                 display_labels=class_names,
+                                 cmap=plt.cm.Blues,
+                                 normalize=None)
+    disp.ax_.set_title("Confusion matrix, without normalization")
+    plt.show();
+    print(disp.confusion_matrix)
+    plt.savefig('confusion_matrix.png')
+    
+    disp = plot_confusion_matrix(clf, X_test, y_test,
+                                 display_labels=class_names,
+                                 cmap=plt.cm.Blues,
+                                 normalize='true')
+    disp.ax_.set_title("Normalized confusion matrix")
+    plt.show();
+    print(disp.confusion_matrix)
+    plt.savefig('normalized_confusion_matrix.png')
 
     ensure_path_exists(out)
     with open(out, 'wb') as outfile:
