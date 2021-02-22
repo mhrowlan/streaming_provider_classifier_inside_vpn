@@ -109,11 +109,11 @@ def engineer_features(
     #----------GROUP FEATURES-----------
     #Arely's
     #ft1: ratio of (number of packet sizes from 0-200 size)/(number of all packets)
-    ft1 = len(df[(df['size'] <200)]) / len(df)
+    small_packet_ratio = len(df[(df['size'] <200)]) / len(df)
     #ft2: ratio of (upload packet sizes in range [200-400])/(number of all packets)
-    ft2 = len(df[(df['size'] >200) & (df['size'] <400)]) / len(df)
+    medium_packet_ratio = len(df[(df['size'] >200) & (df['size'] <400)]) / len(df)
     #ft3: ratio of (number of pksize >1200)/ (number of all packets)
-    ft3 = len(df[(df['size'] >1200)]) / len(df)
+    large_packet_ratio = len(df[(df['size'] >1200)]) / len(df)
     
     #Chang's
     download_bytes_cv = np.std(df[df['dir'] == 2]['size']) / np.mean(df[df['dir'] == 2]['size'])
@@ -128,9 +128,9 @@ def engineer_features(
                 received_large_prop,
                 received_small_prop,
                 df_max_prom,
-                ft1,
-                ft2,
-                ft3,
+                small_packet_ratio,
+                medium_packet_ratio,
+                large_packet_ratio,
                 download_bytes_cv,
                 upload_bytes_cv,
                 
@@ -185,13 +185,12 @@ def create_features(source_dir, out_dir, out_file, chunk_size, rolling_window_1,
         'received_large_prop',
         'received_small_prop',
         'max_frequency_prominence',
-        'ft1',
-        'ft2',
-        'ft3',
+        'small_packet_ratio',
+        'medium_packet_ratio',
+        'large_packet_ratio',
         'download_bytes_cv',
         'upload_bytes_cv',
-        'provider'
-    ]
+        'provider']
 
 
     args = [

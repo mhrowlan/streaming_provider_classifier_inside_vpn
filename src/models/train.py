@@ -58,19 +58,17 @@ def train_model(source, out, validation_size, classifier, model_params):
                                  display_labels=class_names,
                                  cmap=plt.cm.Blues,
                                  normalize=None)
-    disp.ax_.set_title("Confusion matrix, without normalization")
-    plt.show();
+    disp.ax_.set_title("Confusion matrix, without normalization");
     print(disp.confusion_matrix)
-    plt.savefig('confusion_matrix.png')
+    plt.savefig('confusion_matrix.png');
     
     disp = plot_confusion_matrix(clf, X_test, y_test,
                                  display_labels=class_names,
                                  cmap=plt.cm.Blues,
                                  normalize='true')
-    disp.ax_.set_title("Normalized confusion matrix")
-    plt.show();
+    disp.ax_.set_title("Normalized confusion matrix");
     print(disp.confusion_matrix)
-    plt.savefig('normalized_confusion_matrix.png')
+    plt.savefig('normalized_confusion_matrix.png');
 
     ensure_path_exists(out)
     with open(out, 'wb') as outfile:
