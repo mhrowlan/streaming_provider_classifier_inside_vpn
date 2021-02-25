@@ -1,4 +1,3 @@
-
 # Classifying Streaming Providers inside a VPN
 Jerry Qian, Molly Rowland, Arely Vasquez, Chang Yuan, and Raimundo Castro
 
