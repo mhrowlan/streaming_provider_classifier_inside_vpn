@@ -28,13 +28,11 @@ When it comes to classifying which streaming service provider is being used in a
 ### Key Terms!
 - Virtual Private Network (VPN): creates a private network across a public network
 - Packet: formatted unit of data carrying information on where to send data and the payload of data
-<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/packet-diagram.png" text-align="center" width= "250">
-
 - Byte: data contained in the packet, group of 8 bits 
-<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/byte-diagram.png"  text-align="center" width= "250" >
-
 - Live video: video that is being created and streamed at the same time
 - Video on Demand: video that is created and stored on a server accessible at a later time 
+<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/byte-diagram.png"  text-align="center" width= "250" >
+<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/packet-diagram.png" text-align="center" width= "250">
 
 ## Understanding VPNs
 VPNs create a secure network connection over public networks. Some uses for them are protecting data, accessing remote computers, and by passing geographically restricted streaming libraries. Whatever the reason you are using the VPN, you want a fast connection. Below is a diagram explain how VPNs work compared to normal internet traffic. The VPN creates an encryption level to protect your data transfers!
