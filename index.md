@@ -41,6 +41,7 @@ When it comes to classifying which streaming service provider is being used in a
 VPNs create a secure network connection over public networks. Some uses for them are protecting data, accessing remote computers, and by passing geographically restricted streaming libraries. Whatever the reason you are using the VPN, you want a fast connection. Below is a diagram explain how VPNs work compared to normal internet traffic. The VPN creates an encryption level to protect your data transfers!
 <br>
 <img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/vpn-diagram.png" text-align="center" >
+![vpn](/assets/vpn-diagram.png)
 
 
 
