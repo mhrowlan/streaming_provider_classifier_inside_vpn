@@ -1,4 +1,16 @@
+title{
+  font-size: 24px
+}
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
 
-img{ height: 200px; }
-img[vpn]{height: 400px;}
-title{ font-size: 24px;}
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
