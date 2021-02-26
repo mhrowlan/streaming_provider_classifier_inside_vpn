@@ -51,7 +51,7 @@ VPNs create a secure network connection over public networks. Some uses for them
 <br>
 <img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/vpn-diagram.png" text-align="center" >
 
-![vpn]({{https://mhrowlan.github.io/streaming_provider_classifier_inside_vpn/}}/assets/vpn-diagram.png)
+![vpn](https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/vpn-diagram.png)
 
 
 ## The Data
