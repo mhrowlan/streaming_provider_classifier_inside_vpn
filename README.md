@@ -16,7 +16,7 @@
 https://mhrowlan.github.io/streaming_provider_classifier_inside_vpn/
 ## Abstract
 
-Whether to access another country's Netflix library or for privacy, more people are using Virtual Private Networks (VPN) to stream videos than ever before. However, many of the different service providers offer different user experiences that can lead to differences in the network transmissions. In this paper we will discuss the methods in which we made a classifying model to determine what streaming service provider was being used over a VPN. The streaming providers that the model identifies are Amazon Prime, Youtube, Netflix, Youtube Live and Twitch. This is valuable in understanding the differences in the network work patterns for the different streaming service providers. We achieve an average accuracy of 96.5% on our Random Forest model.
+Whether to access another country's Netflix library or for privacy, more people are using Virtual Private Networks (VPN) to stream videos than ever before. However, many of the different service providers offer different user experiences that can lead to differences in the network transmissions. This repository contains the implementation of our classifying model to determine what streaming service provider was being used over a VPN. The streaming providers that the model identifies are Amazon Prime, Youtube, Netflix, Youtube Live, Twitch, and an other category consiting of Disney+, Discovery+, and Hulu. This is valuable in understanding the differences in the network work patterns for the different streaming service providers. We achieve an average accuracy of 96.5% on our Random Forest model.
 
 ## Approach
 
