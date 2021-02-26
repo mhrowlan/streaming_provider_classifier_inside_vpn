@@ -97,8 +97,8 @@ def _process_file(args):
     try:
         return process_file(*args)
     except Exception as e:
-        # print(args)
-        logging.info(args)
+        print(args)
+        #logging.info(args)
         raise e
 
 def process_file(filepath, out_dir):
@@ -108,7 +108,6 @@ def process_file(filepath, out_dir):
     
     # print(f'Processing {filepath}')
     # logging.info(f'Processing {filepath}')
-
     df = pd.read_csv(filepath)
     
     # Filter out irrelevant traffic
@@ -139,7 +138,6 @@ def preprocess_data(source_dir, out_dir):
     Loads data from source, then performs cleaning and preprocessing steps. Each
     preprocessed file is saved to the out directory.
     """
-
     source_path = pathlib.Path(source_dir)
     out_path = pathlib.Path(out_dir)
     
@@ -170,7 +168,7 @@ def preprocess_data(source_dir, out_dir):
     to_process = [
         fp
         # We can pass a glob pattern to further constrain what files we look at.
-        for fp in source_path.glob('*')
+        for fp in source_path.glob('*.csv')
         if 'novpn' not in fp.name
     ]
 

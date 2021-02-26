@@ -42,8 +42,9 @@ def engineer_features(
 
     #if there are no received bytes or packets, skip this chunk
     if received_bytes == 0 or received_packets == 0:
-        return
-
+        print('no received bytes/packets')
+        return None
+    print('multiple bytes')
     received_mean_size = df.loc[df.dir==2, 'size'].mean()
     sent_mean_size = df.loc[df.dir==1, 'size'].mean()
 
@@ -103,46 +104,33 @@ def engineer_features(
     #need to convert milliseconds to seconds here
     rolling_delays_10 = roll(df, 'ip_delay', int(rolling_window_1/1000))['mean'].mean()
     rolling_delays_60 = roll(df, 'ip_delay', int(rolling_window_2/1000))['mean'].mean()
-    
-    #longest streaks
-    #streak_sent = longest_dir_streak(df['dir'], 1)
-    #streak_received = longest_dir_streak(df['dir'], 2)
+
     
     #----------GROUP FEATURES-----------
     #Arely's
     #ft1: ratio of (number of packet sizes from 0-200 size)/(number of all packets)
-    ft1 = len(df[(df['size'] <200)]) / len(df)
+    small_packet_ratio = len(df[(df['size'] <200)]) / len(df)
     #ft2: ratio of (upload packet sizes in range [200-400])/(number of all packets)
-    ft2 = len(df[(df['size'] >200) & (df['size'] <400)]) / len(df)
+    medium_packet_ratio = len(df[(df['size'] >200) & (df['size'] <400)]) / len(df)
     #ft3: ratio of (number of pksize >1200)/ (number of all packets)
-    ft3 = len(df[(df['size'] >1200)]) / len(df)
-    
-    #Molly's
-    #sent_bytes_mean = df[df['dir'] == 1]['size'].mean()
-    #received_bytes_mean = df[df['dir'] == 2]['size'].mean()
+    large_packet_ratio = len(df[(df['size'] >1200)]) / len(df)
     
     #Chang's
     download_bytes_cv = np.std(df[df['dir'] == 2]['size']) / np.mean(df[df['dir'] == 2]['size'])
     upload_bytes_cv = np.std(df[df['dir'] == 1]['size']) / np.mean(df[df['dir'] == 1]['size'])
     
-    features = [#bytes_ratio,
-                #count_ratio,
+    features = [
                 rolling_delays_10,
                 rolling_delays_60,
                 received_mean_size,
                 sent_mean_size,
-                #sent_large_prop,
                 sent_small_prop,
                 received_large_prop,
                 received_small_prop,
-                #streak_sent,
-                #streak_received,
                 df_max_prom,
-                ft1,
-                ft2,
-                ft3,
-                #sent_bytes_mean,
-                #received_bytes_mean,
+                small_packet_ratio,
+                medium_packet_ratio,
+                large_packet_ratio,
                 download_bytes_cv,
                 upload_bytes_cv,
                 
@@ -165,7 +153,7 @@ def create_features(source_dir, out_dir, out_file, chunk_size, rolling_window_1,
     #flattening list
     merged = list(itertools.chain.from_iterable(split_df_groups))
     
-    #0s and 1s indicating whether or not streaming is occurring
+    #streaming provider label
     merged_keys = [m[0] for m in merged]
     
     #the actual dataframes
@@ -197,13 +185,12 @@ def create_features(source_dir, out_dir, out_file, chunk_size, rolling_window_1,
         'received_large_prop',
         'received_small_prop',
         'max_frequency_prominence',
-        'ft1',
-        'ft2',
-        'ft3',
+        'small_packet_ratio',
+        'medium_packet_ratio',
+        'large_packet_ratio',
         'download_bytes_cv',
         'upload_bytes_cv',
-        'provider'
-    ]
+        'provider']
 
 
     args = [

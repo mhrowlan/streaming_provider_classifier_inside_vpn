@@ -15,6 +15,8 @@ WORKDIR /usr/local/src
 RUN wget "https://github.com/helpsystems/pcapy/archive/0.11.5.tar.gz" && \
     tar -xf 0.11.5.tar.gz && \
     rm 0.11.5.tar.gz
+    
+#RUN pip install graphviz
 
 RUN cd pcapy*/ && \
     python3 setup.py install
