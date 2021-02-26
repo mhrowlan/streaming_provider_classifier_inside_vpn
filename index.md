@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset=“UTF-8”>
-<meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
-<meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
-
-</head>
-
 # Classifying Streaming Providers inside a VPN
 Jerry Qian, Molly Rowland, Arely Vasquez, Chang Yuan, and Raimundo Castro
 
@@ -51,7 +42,6 @@ VPNs create a secure network connection over public networks. Some uses for them
 <br>
 <img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/vpn-diagram.png" text-align="center" >
 
-![vpn](https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/vpn-diagram.png)
 
 
 ## The Data
