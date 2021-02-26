@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/style.css" />
 
 # Classifying Streaming Providers inside a VPN
 Jerry Qian, Molly Rowland, Arely Vasquez, Chang Yuan, and Raimundo Castro
