@@ -42,15 +42,16 @@ When it comes to classifying which streaming service provider is being used in a
 - Live video: video that is being created and streamed at the same time
 - Video on Demand: video that is created and stored on a server accessible at a later time 
 <div>
-<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/packet-diagram.png" text-align="center" height= "250">
-<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/byte-diagram.png"  text-align="center" height= "250" >
+<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/packet-diagram.png" text-align="center" height= "250">
+<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/byte-diagram.png"  text-align="center" height= "250" >
 </div>
+
 ## Understanding VPNs
 VPNs create a secure network connection over public networks. Some uses for them are protecting data, accessing remote computers, and by passing geographically restricted streaming libraries. Whatever the reason you are using the VPN, you want a fast connection. Below is a diagram explain how VPNs work compared to normal internet traffic. The VPN creates an encryption level to protect your data transfers!
 <br>
-<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/vpn-diagram.png" text-align="center" >
+<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/vpn-diagram.png" text-align="center" >
 
-![vpn]({{ https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/}}/vpn-diagram.png)
+![vpn]({{https://mhrowlan.github.io/streaming_provider_classifier_inside_vpn/}}/assets/vpn-diagram.png)
 
 
 ## The Data
