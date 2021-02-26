@@ -1,7 +1,6 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 
-# Classifying Streaming Providers inside a VPN
-Jerry Qian, Molly Rowland, Arely Vasquez, Chang Yuan, and Raimundo Castro
+### Authors: Jerry Qian, Molly Rowland, Arely Vasquez, Chang Yuan, and Raimundo Castro
 
 ## Research Question: Can we identify what streaming service provider is being used across a VPN tunnel? How does adding live video affect the model classification? 
  **Site Guide**:
