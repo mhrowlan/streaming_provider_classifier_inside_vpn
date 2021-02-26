@@ -33,11 +33,11 @@ When it comes to classifying which streaming service provider is being used in a
 - Live video: video that is being created and streamed at the same time
 - Video on Demand: video that is created and stored on a server accessible at a later time 
   
-<div>
-  <div>
+<div class="row">
+  <div class="column">
     <img src="/streaming_provider_classifier_inside_vpn/assets/packet-diagram.png" height="200" >
   </div>
-  <div>
+  <div class="column">
     <img src="/streaming_provider_classifier_inside_vpn/assets/byte-diagram.png" height="200" >
   </div>
 </div>
