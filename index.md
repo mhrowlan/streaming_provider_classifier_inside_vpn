@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+
 # Classifying Streaming Providers inside a VPN
 Jerry Qian, Molly Rowland, Arely Vasquez, Chang Yuan, and Raimundo Castro
 
@@ -32,15 +34,18 @@ When it comes to classifying which streaming service provider is being used in a
 
 - Live video: video that is being created and streamed at the same time
 - Video on Demand: video that is created and stored on a server accessible at a later time 
+
 <div>
-<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/packet-diagram.png" text-align="center" height= "250">
-<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/byte-diagram.png"  text-align="center" height= "250" >
+  
+ ![packet](/assets/packet-diagram.png)
+  
+ ![byte](/assets/byte-diagram.png)
 </div>
 
 ## Understanding VPNs
 VPNs create a secure network connection over public networks. Some uses for them are protecting data, accessing remote computers, and by passing geographically restricted streaming libraries. Whatever the reason you are using the VPN, you want a fast connection. Below is a diagram explain how VPNs work compared to normal internet traffic. The VPN creates an encryption level to protect your data transfers!
 <br>
-<img src="https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn/blob/gh-pages/assets/vpn-diagram.png" text-align="center" >
+
 ![vpn](/assets/vpn-diagram.png)
 
 
