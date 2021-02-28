@@ -2,8 +2,10 @@
 function plotprimehistogram() {
     Highcharts.chart('container1', {
         chart: {
-          type: 'histogram'
+          type: 'histogram',
+	renderTo: "container"
         },
+	    
         title: {
           text: 'Amazon Prime: Packet Size Frequency'
         },
