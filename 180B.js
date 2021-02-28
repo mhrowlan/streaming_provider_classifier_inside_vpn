@@ -367,7 +367,8 @@ function plotstackedhistogram() {
 var chart = Highcharts.chart('container', {
 
     chart: {
-        type: 'column'
+        type: 'column',
+	renderTo: "container"
     },
 
     title: {
