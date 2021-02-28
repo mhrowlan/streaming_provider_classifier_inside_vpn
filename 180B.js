@@ -466,7 +466,7 @@ function init() {
 
     console.log("inside")
     plotcolumn();
-    plotstackedhistogram();
+    //plotstackedhistogram();
 
 
 }
