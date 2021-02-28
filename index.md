@@ -31,7 +31,7 @@ How does adding live video affect the model classification?
   - [Other](#other)
 - [Comparing the Providers](#comparing-the-providers)
 - [The Classifier](#the-classifier)
-- [Discussions](#discussions)
+- [Accomplishments, Limitations, and Future Directions](#Accomplishments,-Limitations,-and-Future-Directions)
 
 
 ## Project Purpose
@@ -91,8 +91,10 @@ amazon prime vs twitch
 youtube live vs twitch
 twitch vs youtube live
 
+
 ## The Classifier 
 Our classifier is a random forest classifier! 
+
 
 ## Accomplishments, Limitations, and Future Directions
 
