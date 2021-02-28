@@ -371,6 +371,7 @@ function init() {
     plottwitchhistogram();
     plotyoutubeliveistogram();
     plotstackedhistogram();
+    console.log("inside")
 
 
 }
