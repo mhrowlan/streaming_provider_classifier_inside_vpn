@@ -1,7 +1,9 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script src="180B.js"> </script>
 <script src="https://code.highcharts.com/highcharts.js"> </script>
-
+<script src="https://code.highcharts.com/modules/histogram-bellcurve.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 ### Authors: Jerry Qian, Molly Rowland, Arely Vasquez, Chang Yuan, and Raimundo Castro
 
