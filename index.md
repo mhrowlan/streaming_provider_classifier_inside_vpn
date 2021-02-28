@@ -15,8 +15,8 @@
 ### Authors: Jerry Qian, Molly Rowland, Arely Vasquez, Chang Yuan, and Raimundo Castro
 
 ## Research Questions: 
-Can we identify what streaming service provider is being used across a VPN tunnel? 
-How does adding live video affect the model classification? 
+## - Can we identify what streaming service provider is being used across a VPN tunnel? 
+## - How does adding live video affect the model classification? 
 
  **Site Guide**:
 - [Project Purpose](#project-purpose)
