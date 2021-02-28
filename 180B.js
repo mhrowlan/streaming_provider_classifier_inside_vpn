@@ -364,7 +364,7 @@ function plotstackedhistogram() {
   }]
       })};
 
-function plottwitchhistogram() { = Highcharts.chart('container', {
+function plotcolumn() {  Highcharts.chart('container', {
 
     chart: {
         type: 'column',
@@ -464,9 +464,9 @@ function plottwitchhistogram() { = Highcharts.chart('container', {
 
 function init() { 
 
-    
-    plotstackedhistogram();
     console.log("inside")
+    plotcolumn();
+    plotstackedhistogram();
 
 
 }
