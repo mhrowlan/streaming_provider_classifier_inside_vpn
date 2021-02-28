@@ -1,6 +1,6 @@
 
 function plotprimehistogram() {
-    Highcharts.chart('container', {
+    Highcharts.chart('container1', {
         chart: {
           type: 'histogram'
         },
@@ -362,7 +362,7 @@ function plotstackedhistogram() {
   }]
       })};
 
-var chart = Highcharts.chart('container2', {
+var chart = Highcharts.chart('container', {
 
     chart: {
         type: 'column'
@@ -456,6 +456,7 @@ var chart = Highcharts.chart('container2', {
         }]
     }
 });
+
 
 
 function init() { 
