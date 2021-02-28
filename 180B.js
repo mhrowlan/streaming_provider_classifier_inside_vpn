@@ -364,7 +364,7 @@ function plotstackedhistogram() {
   }]
       })};
 
-var chart = Highcharts.chart('container', {
+function plottwitchhistogram() { = Highcharts.chart('container', {
 
     chart: {
         type: 'column',
@@ -458,7 +458,7 @@ var chart = Highcharts.chart('container', {
             }
         }]
     }
-});
+})};
 
 
 
