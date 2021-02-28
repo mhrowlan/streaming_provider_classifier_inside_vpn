@@ -365,11 +365,11 @@ function plotstackedhistogram() {
 
 function init() { 
 
-    plotprimehistogram();
-    plotyoutubehistogram();
-    plotnetflixhistogram();
-    plottwitchhistogram();
-    plotyoutubeliveistogram();
+   # plotprimehistogram();
+   # plotyoutubehistogram();
+   # plotnetflixhistogram();
+   # plottwitchhistogram();
+   # plotyoutubeliveistogram();
     plotstackedhistogram();
 
 
