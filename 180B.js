@@ -365,11 +365,7 @@ function plotstackedhistogram() {
 
 function init() { 
 
-    plotprimehistogram();
-    plotyoutubehistogram();
-    plotnetflixhistogram();
-    plottwitchhistogram();
-    plotyoutubeliveistogram();
+    
     plotstackedhistogram();
     console.log("inside")
 
