@@ -80,11 +80,24 @@ Our classifier is a random forest classifier!
 
 ## Accomplishments, Limitations, and Future Directions
 
+<table>
+  <tr>
+    <th>Accomplishments</th>
+    <th>Limitations</th>
+    <th>Future Directions</th>
+  </tr>
+  <tr>
+    <td>Our model performs well on our test data</td>
+    <td>Our test data could be more robust</td>
+    <td>Create a more robust Dataset</td>
+  </tr>
+  <tr>
+    <td>Potentially Generalizable Features that could be used on new providers</td>
+    <td>Currently Can only do our 5 providers against an other category</td>
+    <td>Collect more data from different providers and integrate them into the model</td>
+  </tr>
 
-| Accomplishmemts      | Limitations | Future Directions     |
-| --- | ----------- |----------- |
-| Our model performs well on our test data      | Our test data could be more robust       | Create a more robust Dataset  |
-| Potentially Generalizable Features that could be used on new providers   | Currently Can only do our 5 providers against an other category        | Collect more data from different providers and integrate them into the model     |
+</table>
 
 - Currently our data only consist of 1x playback speed and was recorded in a clean setting, meaning there was no other data being sent or recieved, such as with messages or other browsing. We can make it more robust by adding more playback speeds and introducing noisy data into our dataset 
 - Currently our model can only identify the 5 streaming providers against an other class. However, this could be improved upon by training the model on more providers. Many more providers are entering the market such as Peacock from NBC, Paramount+, CBS All Access and many more. It will be beneficial for Viasat to understand how these many different providers send data across a VPN, and our model is an awesome tool to do that with!
