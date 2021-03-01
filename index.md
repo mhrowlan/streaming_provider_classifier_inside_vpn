@@ -59,6 +59,7 @@ test
 test
 
 ## Comparing the Providers
+One of the features we looked at was packet frequency. In the chart below, we can see the range of size and frequency for each provider. The chart is normalized for ease of reading, so each providers ratio is out of 1. 
 <figure class="highcharts-figure" onload="init()">
     <div id="container"></div>
     <p class="highcharts-description">
@@ -75,6 +76,9 @@ test
 
 ## The Classifier 
 Our classifier is a random forest classifier! 
+We have a random forest classifier with 13 features. While this may seem like a lot of features, each plays an important role in model performance. When we tried to remove the least significant ones, the model perfomance declined signficantly. This however means we can't show you one of the trees from our random forest classifier because it is too big and difficult to read. Below is an example of a single tree that would be in our forest of trees to help classify our data. 
+<br>
+Scroll over each level to learn more about how a decision tree works!
 <figure class="highcharts-figure" onload="init()">
     <div id="tree"></div>
     <p class="highcharts-description">
@@ -103,6 +107,7 @@ Our classifier is a random forest classifier!
 </table>
 
 - Currently our data only consist of 1x playback speed and was recorded in a clean setting, meaning there was no other data being sent or recieved, such as with messages or other browsing. We can make it more robust by adding more playback speeds and introducing noisy data into our dataset 
+
 - Currently our model can only identify the 5 streaming providers against an other class. However, this could be improved upon by training the model on more providers. Many more providers are entering the market such as Peacock from NBC, Paramount+, CBS All Access and many more. It will be beneficial for Viasat to understand how these many different providers send data across a VPN, and our model is an awesome tool to do that with!
  
 # Thank you for reading!
