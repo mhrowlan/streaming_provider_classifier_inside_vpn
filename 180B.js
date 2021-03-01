@@ -240,14 +240,14 @@ function treeexample(){
       name: 'Youtube',
       column: 2,
       layout: 'hanging',
-      color: "rgb(225,15,0)",
+      color: "#e10f00",
       info: "Classified Data"
     },  {
       id: 'DSSB',
       name: 'Netflix',
       column: 2,
       layout: 'hanging',
-      color: "ba020e",
+      color: "#ba020e",
       info: "Classified Data"
     }, {
       id: 'EESB',
@@ -268,7 +268,7 @@ function treeexample(){
       name: 'Amazon',
       column: 2,
       layout: 'hanging',
-      color: "blue",
+      color: "#00ade1",
       info: "Classified Data"
     }],
     colorByPoint: false,
