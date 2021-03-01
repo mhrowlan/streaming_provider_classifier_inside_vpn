@@ -146,10 +146,16 @@ function plotcolumn() {  Highcharts.chart('container', {
   
 	}
     ]})};
+function removeside(){
+	var sidebar= document.getElementById("sidebar")
+	sidebar.remove()
+	
+}
 
 function init() { 
 
     console.log("inside")
+    removeside()
     plotcolumn();
     //plotstackedhistogram();
 
