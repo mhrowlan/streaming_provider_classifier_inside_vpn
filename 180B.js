@@ -372,11 +372,11 @@ function plotcolumn() {  Highcharts.chart('container', {
     },
 
     title: {
-        text: 'Highcharts responsive chart'
+        text: 'Streaming Providers: Packet Size Frequency'
     },
 
     subtitle: {
-        text: 'Resize the frame or click buttons to change appearance'
+        text: ''
     },
 
     legend: {
@@ -386,6 +386,9 @@ function plotcolumn() {  Highcharts.chart('container', {
     },
 
     xAxis: {
+	     title: {
+              text: 'Packet Sizes'
+              },
         categories: [0, 200, 400, 600, 800, 
 			  1000, 1200, 1400, 1600],
         labels: {
@@ -394,12 +397,16 @@ function plotcolumn() {  Highcharts.chart('container', {
     },
 
     yAxis: {
-        allowDecimals: false,
+	    min: 0,
+          max:1,
+        allowDecimals: true,
         title: {
             text: 'Amount'
         }
     },
-
+	title: {
+          text: 'Normalized Frequency'
+          },
     series: [{
         name: 'Amazon Prime',
 			data: [0.1357, 0.1010,0.0076, 0.0054, 0.0048, 0.0047,0.7373,0.0032],
