@@ -371,11 +371,11 @@ function plotcolumn() {  Highcharts.chart('container', {
     },
 
     title: {
-        text: 'title'
+        text: 'Streaming Providers: Packet Size Frequency'
     },
 
     subtitle: {
-        text: 'Resize the frame or click buttons to change appearance'
+        text: 'Hover over the providers for more information!'
     },
 
     legend: {
