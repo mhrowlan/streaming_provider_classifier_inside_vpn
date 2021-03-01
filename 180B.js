@@ -84,7 +84,7 @@ function plotstackedhistogram() {
 function plotcolumn() {  Highcharts.chart('container', {
 
     chart: {
-        type: 'histogram'
+        type: 'column'
     },
 
     title: {
