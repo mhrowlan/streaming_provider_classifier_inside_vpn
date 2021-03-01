@@ -244,17 +244,17 @@ function treeexample(){
       info: "Classified Data"
     },  {
       id: 'DSSB',
+      name: 'Twitch',
+      column: 2,
+      layout: 'hanging',
+      color: "#b16eff",
+      info: "Classified Data"
+    }, {
+      id: 'EESB',
       name: 'Netflix',
       column: 2,
       layout: 'hanging',
       color: "#ba020e",
-      info: "Classified Data"
-    }, {
-      id: 'EESB',
-      name: 'Twitch',
-      column: 2,
-      layout: 'hanging',
-      color: "b16eff",
       info: "Classified Data"
     },  {
       id: 'TSB',
