@@ -47,7 +47,6 @@ def train_model(source, out, validation_size, classifier, model_params):
     clf.fit(X_train, y_train)
     y_pred = clf.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
-    print(y_pred, y_test)
     # print('%s model accuracy: %s' % (classifier, accuracy))
     logging.info('%s model accuracy: %s' % (classifier, accuracy))
     
@@ -57,18 +56,18 @@ def train_model(source, out, validation_size, classifier, model_params):
     disp = plot_confusion_matrix(clf, X_test, y_test,
                                  display_labels=class_names,
                                  cmap=plt.cm.Blues,
-                                 normalize=None)
+                                 normalize=None);
     disp.ax_.set_title("Confusion matrix, without normalization");
-    print(disp.confusion_matrix)
     plt.savefig('confusion_matrix.png');
+    plt.show()
     
     disp = plot_confusion_matrix(clf, X_test, y_test,
                                  display_labels=class_names,
                                  cmap=plt.cm.Blues,
-                                 normalize='true')
+                                 normalize='true');
     disp.ax_.set_title("Normalized confusion matrix");
-    print(disp.confusion_matrix)
     plt.savefig('normalized_confusion_matrix.png');
+    plt.show()
 
     ensure_path_exists(out)
     with open(out, 'wb') as outfile:
