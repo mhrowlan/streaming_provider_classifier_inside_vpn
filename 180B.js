@@ -428,7 +428,7 @@ function plotcolumn() {  Highcharts.chart('container', {
 	  color: 'rgb(225,15,0)'
   
 	}
-    ]});
+    ]})};
 
 function init() { 
 
