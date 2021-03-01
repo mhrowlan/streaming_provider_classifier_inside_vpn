@@ -365,18 +365,18 @@ function plotstackedhistogram() {
       })};
 
 function plotcolumn() {  Highcharts.chart('container', {
+{
 
     chart: {
-        type: 'column',
-	renderTo: "container"
+        type: 'column'
     },
 
     title: {
-        text: 'Streaming Providers: Packet Size Frequency'
+        text: 'title'
     },
 
     subtitle: {
-        text: ''
+        text: 'Resize the frame or click buttons to change appearance'
     },
 
     legend: {
@@ -386,28 +386,23 @@ function plotcolumn() {  Highcharts.chart('container', {
     },
 
     xAxis: {
-	     title: {
-              text: 'Packet Sizes'
-              },
         categories: [0, 200, 400, 600, 800, 
 			  1000, 1200, 1400, 1600],
         labels: {
             x: -10
-        }
+        },title: {
+              text: 'Packet Sizes'
+              },
+  
     },
 
     yAxis: {
-	    min: 0,
-          max:1,
         allowDecimals: true,
-	 
         title: {
             text: 'Normalized Frequency'
         }
     },
-        
-    },
-	
+
     series: [{
         name: 'Amazon Prime',
 			data: [0.1357, 0.1010,0.0076, 0.0054, 0.0048, 0.0047,0.7373,0.0032],
@@ -434,39 +429,8 @@ function plotcolumn() {  Highcharts.chart('container', {
 	  color: 'rgb(225,15,0)'
   
 	}
-    ],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    align: 'center',
-                    verticalAlign: 'bottom',
-                    layout: 'horizontal'
-                },
-                yAxis: {
-                    labels: {
-                        align: 'left',
-                        x: 0,
-                        y: -5
-                    },
-                    title: {
-                        text: null
-                    }
-                },
-                subtitle: {
-                    text: null
-                },
-                credits: {
-                    enabled: false
-                }
-            }
-        }]
-    }
-})};
+    ]});
+   )};
 
 
 
