@@ -365,7 +365,6 @@ function plotstackedhistogram() {
       })};
 
 function plotcolumn() {  Highcharts.chart('container', {
-{
 
     chart: {
         type: 'column'
@@ -430,9 +429,6 @@ function plotcolumn() {  Highcharts.chart('container', {
   
 	}
     ]});
-   )};
-
-
 
 function init() { 
 
