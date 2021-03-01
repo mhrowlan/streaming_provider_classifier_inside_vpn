@@ -156,7 +156,7 @@ function treeexample(){
 	Highcharts.chart('tree', {
 
   chart: {
-    height: 600,
+    height: 400,
     inverted: true
   },
 
@@ -190,26 +190,26 @@ function treeexample(){
       dataLabels: {
         color: 'black'
       },
-      height: 25
+      height: 20
     }, {
       level: 1,
       color: 'silver',
       dataLabels: {
         color: 'black'
       },
-      height: 25
+      height: 20
     }, {
       level: 2,
       dataLabels: {
         color: 'black'
       },
-      height: 25
+      height: 20
     }, {
       level: 4,
       dataLabels: {
         color: 'black'
       },
-      height: 25
+      height: 20
     }],
     nodes: [{
       id: 'Director',
@@ -295,13 +295,8 @@ function treeexample(){
       //debugger;
       return this.point.info;
     }
-  },
-
-  exporting: {
-    allowHTML: true,
-    sourceWidth: 800,
-    sourceHeight: 600
   }
+
 });
 
 }
