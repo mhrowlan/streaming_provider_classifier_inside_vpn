@@ -3,6 +3,8 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/modules/sankey.js"></script>
+<script src="https://code.highcharts.com/modules/organization.js"></script>
 <script src="180B.js"> </script>
 
 ### Authors: Jerry Qian, Molly Rowland, Arely Vasquez, Chang Yuan, and Raimundo Castro
@@ -73,7 +75,11 @@ test
 
 ## The Classifier 
 Our classifier is a random forest classifier! 
-
+<figure class="highcharts-figure" onload="init()">
+    <div id="tree"></div>
+    <p class="highcharts-description">
+    </p>
+</figure>
 
 ## Accomplishments, Limitations, and Future Directions
 
