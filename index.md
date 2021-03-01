@@ -7,7 +7,7 @@
 
 ### Authors: Jerry Qian, Molly Rowland, Arely Vasquez, Chang Yuan, and Raimundo Castro
 
-## Research Question:Can we identify what streaming service provider is being used across a VPN tunnel?  
+## Research Question: Can we identify what streaming service provider is being used across a VPN tunnel?  
 
  **Site Guide**:
 - [Project Purpose](#project-purpose)
