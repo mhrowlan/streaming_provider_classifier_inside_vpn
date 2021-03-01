@@ -247,14 +247,14 @@ function treeexample(){
       name: 'Netflix',
       column: 2,
       layout: 'hanging',
-      color: "darkred",
+      color: "ba020e",
       info: "Classified Data"
     }, {
       id: 'EESB',
       name: 'Twitch',
       column: 2,
       layout: 'hanging',
-      color: "purple",
+      color: "b16eff",
       info: "Classified Data"
     },  {
       id: 'TSB',
