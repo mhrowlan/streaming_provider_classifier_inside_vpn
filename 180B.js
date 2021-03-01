@@ -152,10 +152,166 @@ function removeside(){
 	
 }
 
+function treeexample(){
+	Highcharts.chart('tree', {
+
+  chart: {
+    height: 600,
+    inverted: true
+  },
+
+  title: {
+    useHTML: true,
+    text: 'Example Decision Tree'
+  },
+
+  series: [{
+    type: 'organization',
+    name: 'United Nations',
+    keys: ['from', 'to'],
+    data: [
+      
+      ['Director', 'ESU'],
+      ['Director', 'CDS'],
+      
+      ['ESU', 'ESB'],
+      ['ESU', 'DSSB'],
+      ['CDS', 'EESB'],
+      ['CDS', 'TSB'],
+      ['CDS', 'SSB'],
+      
+      
+      
+      
+    ],
+    levels: [{
+      level: 0,
+      color: 'silver',
+      dataLabels: {
+        color: 'black'
+      },
+      height: 25
+    }, {
+      level: 1,
+      color: 'silver',
+      dataLabels: {
+        color: 'black'
+      },
+      height: 25
+    }, {
+      level: 2,
+      dataLabels: {
+        color: 'black'
+      },
+      height: 25
+    }, {
+      level: 4,
+      dataLabels: {
+        color: 'black'
+      },
+      height: 25
+    }],
+    nodes: [{
+      id: 'Director',
+      title: null,
+      name: 'Data',
+      color: "#419dc0",
+           info: "Raw Data processed to enter the classification tree"
+
+    }, {
+      className: 'title',
+      id: 'ESU',
+      title: null,
+      name: 'Engineered Feature',
+      layout: 'hanging',
+      color: "#41c0a4",
+      info: "The variety of different engineered features help classify each file into a certain class"
+    }, {
+      id: 'CDS',
+      title: null,
+      name: 'Engineered Feature',
+      image: null,
+     // layout: 'hanging',
+      color: "#41c0a4",
+      info: "The variety of different engineered features help classify each file into a certain class"
+    }, {
+      id: 'ESB',
+      title: null,
+      name: 'Class A',
+      column: 2,
+      layout: 'hanging',
+      color: "#abd734",
+      info: "Classified Data"
+    }, {
+      id: 'NAS',
+      title: null,
+      name: 'National Accounts Section',
+      layout: 'hanging',
+      color: "#beef3a",
+      info: "National Accounts Section"
+
+    },  {
+      id: 'DSSB',
+      name: 'Class B',
+      column: 2,
+      layout: 'hanging',
+      color: "#34abd7",
+      info: "Classified Data"
+    }, {
+      id: 'EESB',
+      name: 'Class C',
+      column: 2,
+      layout: 'hanging',
+      color: "#d734ab",
+      info: "Classified Data"
+    },  {
+      id: 'TSB',
+      name: 'Class D',
+      column: 2,
+      layout: 'hanging',
+      color: "#d76034",
+      info: "Classified Data"
+    },  {
+      id: 'SSB',
+      name: 'Class E',
+      column: 2,
+      layout: 'hanging',
+      color: "#d7b234",
+      info: "Classified Data"
+    }],
+    colorByPoint: false,
+    color: '#007ad0',
+    dataLabels: {
+      color: 'white',
+    },
+    borderColor: 'white',
+    nodeWidth: 65,
+    nodePadding: 0
+  }],
+
+  tooltip: {
+    outside: true,
+    formatter: function() {
+      //debugger;
+      return this.point.info;
+    }
+  },
+
+  exporting: {
+    allowHTML: true,
+    sourceWidth: 800,
+    sourceHeight: 600
+  }
+});
+
+}
+
+
 function init() { 
 
     console.log("inside")
-    removeside()
+    removeside();
+    treeexample();
     plotcolumn();
     //plotstackedhistogram();
 
