@@ -215,7 +215,7 @@ function treeexample(){
       id: 'Director',
       title: null,
       name: 'Data',
-      color: "#419dc0",
+      color: "#c9daf8ff",
            info: "Raw Data processed to enter the classification tree"
 
     }, {
@@ -224,7 +224,7 @@ function treeexample(){
       title: null,
       name: 'Engineered Feature',
       layout: 'hanging',
-      color: "#41c0a4",
+      color: "#6d9eebff",
       info: "The variety of different engineered features help classify each file into a certain class"
     }, {
       id: 'CDS',
@@ -232,51 +232,43 @@ function treeexample(){
       name: 'Engineered Feature',
       image: null,
      // layout: 'hanging',
-      color: "#41c0a4",
+      color: "#6d9eebff",
       info: "The variety of different engineered features help classify each file into a certain class"
     }, {
       id: 'ESB',
       title: null,
-      name: 'Class A',
+      name: 'Youtube',
       column: 2,
       layout: 'hanging',
-      color: "#abd734",
+      color: "rgb(225,15,0)",
       info: "Classified Data"
-    }, {
-      id: 'NAS',
-      title: null,
-      name: 'National Accounts Section',
-      layout: 'hanging',
-      color: "#beef3a",
-      info: "National Accounts Section"
-
     },  {
       id: 'DSSB',
-      name: 'Class B',
+      name: 'Netflix',
       column: 2,
       layout: 'hanging',
-      color: "#34abd7",
+      color: "darkred",
       info: "Classified Data"
     }, {
       id: 'EESB',
-      name: 'Class C',
+      name: 'Twitch',
       column: 2,
       layout: 'hanging',
-      color: "#d734ab",
+      color: "purple",
       info: "Classified Data"
     },  {
       id: 'TSB',
-      name: 'Class D',
+      name: 'Youtube Live',
       column: 2,
       layout: 'hanging',
-      color: "#d76034",
+      color: "red",
       info: "Classified Data"
     },  {
       id: 'SSB',
-      name: 'Class E',
+      name: 'Amazon',
       column: 2,
       layout: 'hanging',
-      color: "#d7b234",
+      color: "blue",
       info: "Classified Data"
     }],
     colorByPoint: false,
