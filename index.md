@@ -26,7 +26,7 @@ Over the past two quarters, we have been working with Viasat to understand inter
 When it comes to classifying which streaming service provider is being used in a VPN, there are many reasons to collect it. In working with Viasat, their goal as an Internet Service Provider is to offer the best quality experience for their customers. So if they set certain network parameters in place, such as max download rates, certain providers could be more heavily affected. By studying the network patterns of some different service providers and making a tool to classify them, this information can be used to help tune network parameters to optimize streaming for their clients. 
 
 ### Background Information
-#### Key Terms!
+### Key Terms!
 - Virtual Private Network (VPN): creates a private network across a public network
 - Packet: formatted unit of data carrying information on where to send data and the payload of data
 - Byte: data contained in the packet, group of 8 bits 
@@ -42,7 +42,7 @@ When it comes to classifying which streaming service provider is being used in a
   </div>
 </div>
 
-#### Understanding VPNs
+### Understanding VPNs
 VPNs create a secure network connection over public networks. Some uses for them are protecting data, accessing remote computers, and by passing geographically restricted streaming libraries. Whatever the reason you are using the VPN, you want a fast connection. Below is a diagram explain how VPNs work compared to normal internet traffic. The VPN creates an encryption level to protect your data transfers!
 
 
