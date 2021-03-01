@@ -400,9 +400,7 @@ function plotcolumn() {  Highcharts.chart('container', {
 	    min: 0,
           max:1,
         allowDecimals: true,
-        title: {
-            text: 'Amount'
-        }
+        
     },
 	title: {
           text: 'Normalized Frequency'
