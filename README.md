@@ -36,7 +36,7 @@ To leverage the existing dataset, you must be a member of DSMLP and have access 
 
 Log on to DSMLP via `ssh <username>@dsmlp-login.ucsd.edu`
 
-Launch a Docker container with the necessary components via `launch-180.sh -i jeq004/streaming_provider_classifier_inside_vpn -G B05_VPN_XRAY`
+Launch a Docker container with the necessary components via `launch-180.sh -i jeq004/streaming_provider_classifier_inside_vpn -G B05_VPN_XRAY -c 8 -g 1 -m 64`
 
 Clone this repository: `git clone https://github.com/mhrowlan/streaming_provider_classifier_inside_vpn.git`
 
