@@ -400,11 +400,14 @@ function plotcolumn() {  Highcharts.chart('container', {
 	    min: 0,
           max:1,
         allowDecimals: true,
+	 
+        title: {
+            text: 'Normalized Frequency'
+        }
+    },
         
     },
-	title: {
-          text: 'Normalized Frequency'
-          },
+	
     series: [{
         name: 'Amazon Prime',
 			data: [0.1357, 0.1010,0.0076, 0.0054, 0.0048, 0.0047,0.7373,0.0032],
