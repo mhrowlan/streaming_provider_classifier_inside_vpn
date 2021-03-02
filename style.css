@@ -6,10 +6,7 @@
   padding: 5px;
 }
 .column1 {
-  justify-content: space-evenly;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+  float:left;
   width: 32%;
   padding: 5px;
 }
