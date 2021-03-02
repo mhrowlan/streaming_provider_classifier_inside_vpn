@@ -293,6 +293,28 @@ function treeexample(){
 
 }
 
+function uploadappear() {
+    var checkBox = document.getElementById("C1");
+    var text = document.getElementById("text1");
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+
+function downloadappear() {
+    var checkBox = document.getElementById("C2");
+    var text = document.getElementById("text2");
+    if (checkBox.checked == true){
+      text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+
+
+
 
 function init() { 
 
