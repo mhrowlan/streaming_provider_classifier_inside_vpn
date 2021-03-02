@@ -6,7 +6,10 @@
   padding: 5px;
 }
 .column1 {
-  float: left;
+  justify-content: space-evenly;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
   width: 32%;
   padding: 5px;
 }
