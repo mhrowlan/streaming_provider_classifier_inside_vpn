@@ -322,6 +322,9 @@ function init() {
     removeside();
     treeexample();
     plotcolumn();
+	
+	uploadappear();
+	downloadappear();
     //plotstackedhistogram();
 
 
