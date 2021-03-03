@@ -1,7 +1,7 @@
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .logos {
-	justify-content: space-evenly;
+	
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
