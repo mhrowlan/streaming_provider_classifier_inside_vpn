@@ -137,6 +137,8 @@ Scroll over each level to learn more about how a decision tree works!
     </p>
 </figure>
 
+Our model achieves an accuracy of **96.4%**.
+
 <figure class="highcharts-figure" onload="init()">
     <div id="features"></div>
     <p class="highcharts-description">
