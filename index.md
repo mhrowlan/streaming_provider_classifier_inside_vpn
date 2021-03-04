@@ -137,31 +137,43 @@ Scroll over each level to learn more about how a decision tree works!
     </p>
 </figure>
 
-Our model achieves an accuracy of **96.4%**.
+Our model achieves an accuracy of **96.4%**. Here is a list of our features that helped our model achieve this accuracy.
 
 ### Feature Descriptions
 
 | Feature      | Description |
 | ----------- | ----------- |
-| 'smoothed_mean_delay_10s'      | Mean of inter-packet delay (difference in arrival time of previous and next packet) over rolling windows of 10 seconds       |
-| 'upload_bytes_cv'   | The Upload Byte coefficient of variation is the ratio of the standard deviation to the mean, 𝛔/𝝻, of the uploaded byte rates         |
-| 'sent_mean_size'      | The mean upload packet size is calculated by taking the sum of the upload packet size over the total amount of packets to get the average packet size.|
-| 'smoothed_mean_delay_60s'   | Mean of inter-packet delay (difference in arrival time of previous and next packet) over rolling windows of 60 seconds        |
-| 'received_small_prop'      | Ratio of small downloaded packets (<200 bytes) over all downloaded packets       |
-| 'received_large_prop'   | Ratio of large downloaded packets (>1200 bytes) over all downloaded packets        |
-| 'received_mean_size'      | Mean packet size of all downloaded packets       |
-| 'large_packet_ratio'   | The ratio of the count of uploaded packet sizes in the size range of 1200+ bytes and the overall total number of packets. This feature is calculated over the entire dataset collected.         |
-| 'sent_small_prop'      | Ratio of small uploaded packets (<200 bytes) over all uploaded packets       |
-| 'max_frequency_prominence'   | Using Welch’s method to compute the power spectral density of downloaded packets, transformed into amplitude spectral density, then calculating the magnitude of the peak (in bytes) at the most prominent frequency (Hz)        |
-| 'small_packet_ratio'      | The ratio of the count of uploaded packet sizes in the size range of 0-200 bytes and the overall total number of packets. This feature is calculated over the entire dataset collected.        |
-| 'download_bytes_cv'   | The Download Byte coefficient of variation is the ratio of the standard deviation to the mean, 𝛔/𝝻, of the downloaded byte rates        |
-| 'medium_packet_ratio'      | The ratio of the count of uploaded packet sizes in the size range of 200-400 bytes and the overall total number of packets. This feature is calculated over the entire dataset collected.        |
+| smoothed_mean_delay_10s| Mean of inter-packet delay (difference in arrival time of previous and next packet) over rolling windows of 10 seconds       |
+| upload_bytes_cv| The Upload Byte coefficient of variation is the ratio of the standard deviation to the mean, 𝛔/𝝻, of the uploaded byte rates         |
+| sent_mean_size| The mean upload packet size is calculated by taking the sum of the upload packet size over the total amount of packets to get the average packet size.|
+| smoothed_mean_delay_60s| Mean of inter-packet delay (difference in arrival time of previous and next packet) over rolling windows of 60 seconds        |
+| received_small_prop     | Ratio of small downloaded packets (<200 bytes) over all downloaded packets       |
+| received_large_prop   | Ratio of large downloaded packets (>1200 bytes) over all downloaded packets        |
+| received_mean_size      | Mean packet size of all downloaded packets       |
+| large_packet_ratio   | The ratio of the count of uploaded packet sizes in the size range of 1200+ bytes and the overall total number of packets. This feature is calculated over the entire dataset collected.         |
+| sent_small_prop      | Ratio of small uploaded packets (<200 bytes) over all uploaded packets       |
+| max_frequency_prominence   | Using Welch’s method to compute the power spectral density of downloaded packets, transformed into amplitude spectral density, then calculating the magnitude of the peak (in bytes) at the most prominent frequency (Hz)        |
+| small_packet_ratio      | The ratio of the count of uploaded packet sizes in the size range of 0-200 bytes and the overall total number of packets. This feature is calculated over the entire dataset collected.        |
+| download_bytes_cv | The Download Byte coefficient of variation is the ratio of the standard deviation to the mean, 𝛔/𝝻, of the downloaded byte rates        |
+| medium_packet_ratio    | The ratio of the count of uploaded packet sizes in the size range of 200-400 bytes and the overall total number of packets. This feature is calculated over the entire dataset collected.        |
+
+Next, we visualize the importance of each feature in model. Our top feature is actually built on top of another feature, inter-packet delay, which measures the amount of time between the previous packet and next packet. We decided to taking a rolling mean of 10 second window over inter-packet delay, which can reveal precise periodic patterns in how each provider transmits packets.
+
+Our next two best features both look at the behavior of bytes uploaded by the client, and our intuition behind these features is that different streaming providers would require clients to upload packets of varying sizes, such as acknowledgement packets. The first of these two features is the coefficient of variation of uploaded bytes, which is the ratio of the standard deviation over the mean of our uploaded bytes. This ratio helps the model understand the variability of uploaded packets for each provider. Similarly, simply using the mean of the uploaded bytes of each 1.5 minute data chunk also proved to be a huge differentiating factor for each provider.
+
+Surprisingly, the maximum prominence of packet download frequency did not perform as well as other features. We hypothesize that this feature was only useful when differentiating between Browsing and Streaming due to the huge difference in download volume, but as long as we're only comparing streaming providers, their similar download volumes cannot be clarified through this feature. However, for the exception of rolling means of inter-packet delay, the rest of our features only utilize means and ratios. Even with the simiplicity of these features, they are able to perform well in combination with one another and capture the essential differences in each provider.
 
 <figure class="highcharts-figure" onload="init()">
     <div id="features"></div>
     <p class="highcharts-description">
     </p>
 </figure>
+
+Next, we want to analyze our model's performance on each provider class. Our model performs well on every class, with the exception of Amazon Prime, which has the lowest precision score of 0.93.  
+
+<div class="row">
+	<img src="/streaming_provider_classifier_inside_vpn/assets/class_accuracy.png.png" height="300" >
+</div>
 
 <div class="row">
   <div class="column">
