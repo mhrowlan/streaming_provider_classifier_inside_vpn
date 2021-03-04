@@ -29,7 +29,7 @@ function plot_feature_importances() { Highcharts.chart('features', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Feature Importance',
+            text: 'Feature Importance (%)',
             align: 'high'
         },
         labels: {
@@ -49,7 +49,7 @@ function plot_feature_importances() { Highcharts.chart('features', {
     legend: {
         layout: 'vertical',
         align: 'right',
-        verticalAlign: 'top',
+        verticalAlign: 'bottom',
         x: -40,
         y: 80,
         floating: true,
