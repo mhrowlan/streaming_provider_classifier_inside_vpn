@@ -9,19 +9,18 @@ function plot_feature_importances() { Highcharts.chart('features', {
     xAxis: {
         categories: [
         'smoothed_mean_delay_10s',
+		'upload_bytes_cv',
+		'sent_mean_size',
         'smoothed_mean_delay_60s',
-        'received_mean_size',
-        'sent_mean_size',
-        'sent_small_prop',
-        'received_large_prop',
-        'received_small_prop',
+		'received_small_prop',
+		'received_large_prop',
+		'received_mean_size',
+		'large_packet_ratio',
+		'sent_small_prop',
         'max_frequency_prominence',
         'small_packet_ratio',
-        'medium_packet_ratio',
-        'large_packet_ratio',
-        'download_bytes_cv',
-        'upload_bytes_cv',
-        'provider']
+	'download_bytes_cv',
+        'medium_packet_ratio']
 ,
         title: {
             text: null
@@ -63,10 +62,8 @@ function plot_feature_importances() { Highcharts.chart('features', {
         enabled: false
     },
     series: [{
-        name: 'Year 1800',
-        data: [0.03829766, 0.04532762, 0.04681443, 0.0476799 , 0.05105438,
-       0.05589548, 0.06334201, 0.06851336, 0.07458614, 0.11197423,
-       0.1132997 , 0.11746197, 0.16575313]
+        name: 'Feature Importances',
+        data: [16.575313, 11.746197, 11.32997, 11.197422, 7.458614, 6.851336, 6.334201, 5.589548, 5.105438, 4.767989, 4.681443, 4.532762, 3.829766]
     }]
 })};
 
