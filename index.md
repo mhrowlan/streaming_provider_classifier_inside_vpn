@@ -128,12 +128,17 @@ One of the features we looked at was packet frequency. In the chart below, we ca
 
 
 ## The Classifier 
-Our classifier is a random forest classifier! 
-We have a random forest classifier with 13 features. While this may seem like a lot of features, each plays an important role in model performance. When we tried to remove the least significant ones, the model perfomance declined signficantly. This however means we can't show you one of the trees from our random forest classifier because it is too big and difficult to read. Below is an example of a single tree that would be in our forest of trees to help classify our data. 
+Our model uses a random forest classifier, which is just an ensemble of decision trees! We have engineered 13 features for our random forest classifier. While this may seem like a lot of features, each plays an important role in model performance. When we tried to remove the least significant ones, the model perfomance declined signficantly. This however means we can't show you one of the trees from our random forest classifier because its size and complexity makes it difficult to read. Below is an example of a single tree that would be in our forest of trees to help classify our data. 
 <br>
 Scroll over each level to learn more about how a decision tree works!
 <figure class="highcharts-figure" onload="init()">
     <div id="tree"></div>
+    <p class="highcharts-description">
+    </p>
+</figure>
+
+<figure class="highcharts-figure" onload="init()">
+    <div id="features"></div>
     <p class="highcharts-description">
     </p>
 </figure>
