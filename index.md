@@ -169,11 +169,15 @@ Surprisingly, the maximum prominence of packet download frequency did not perfor
     </p>
 </figure>
 
-Next, we want to analyze our model's performance on each provider class. Our model performs well on every class, with the exception of Amazon Prime, which has the lowest precision score of 0.93.  
+Next, we want to analyze our model's performance on each provider class. Our model performs well on every class, with the exception of Amazon Prime, which has the lowest precision score of 0.93. In terms of our classifier, precision is more important than recall since the cost of false negatives is higher than the cost of false negatives. Therefore, even when the "Other" and Twitch categories have lower recall scores, their high precision scores make up for that loss. 
 
 <div class="row">
 	<img src="/streaming_provider_classifier_inside_vpn/assets/class_accuracy.png.png" height="300" >
 </div>
+
+Finally, we take a look at the confusion matrices breaking down where our model performed well and where it failed to predict accurately. We see that Youtube and Amazon Prime have the most incorrectly classified cases. One interesting observation is that Amazon Prime is most commonly incorrectly classified as the "Other" category, meaning that Prime may exhibit similar streaming patterns with one of the Other providers. On the other hand, Youtube can be misclassified as almost any of the providers. For Other, Netflix, Youtube Live, and Twitch, these categories all have an average of less than **1%** of misclassified cases.
+
+We also hypothesizes that because Twitch is owned by Amazon, Twitch would exhibit similar streaming patterns as Amazon Prime. We made a similar hypothesis for Youtube vs Youtube Live. However, we see that our model performs well when differentiating between these pairs of providers.
 
 <div class="row">
   <div class="column">
