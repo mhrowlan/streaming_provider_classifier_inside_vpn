@@ -23,7 +23,7 @@ function plot_feature_importances() { Highcharts.chart('features', {
         'medium_packet_ratio']
 ,
         title: {
-            text: null
+            text: 'Features'
         }
     },
     yAxis: {
@@ -62,7 +62,7 @@ function plot_feature_importances() { Highcharts.chart('features', {
         enabled: false
     },
     series: [{
-        name: 'Feature Importances',
+        name: 'Importance',
         data: [16.575313, 11.746197, 11.32997, 11.197422, 7.458614, 6.851336, 6.334201, 5.589548, 5.105438, 4.767989, 4.681443, 4.532762, 3.829766]
     }]
 })};
