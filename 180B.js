@@ -4,13 +4,25 @@ function plot_feature_importances() { Highcharts.chart('features', {
         type: 'bar'
     },
     title: {
-        text: 'Historic World Population by Region'
-    },
-    subtitle: {
-        text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
+        text: 'Features Ranked by Importance'
     },
     xAxis: {
-        categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+        categories: [
+        'smoothed_mean_delay_10s',
+        'smoothed_mean_delay_60s',
+        'received_mean_size',
+        'sent_mean_size',
+        'sent_small_prop',
+        'received_large_prop',
+        'received_small_prop',
+        'max_frequency_prominence',
+        'small_packet_ratio',
+        'medium_packet_ratio',
+        'large_packet_ratio',
+        'download_bytes_cv',
+        'upload_bytes_cv',
+        'provider']
+,
         title: {
             text: null
         }
@@ -18,7 +30,7 @@ function plot_feature_importances() { Highcharts.chart('features', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Population (millions)',
+            text: 'Feature Importance',
             align: 'high'
         },
         labels: {
@@ -26,7 +38,7 @@ function plot_feature_importances() { Highcharts.chart('features', {
         }
     },
     tooltip: {
-        valueSuffix: ' millions'
+        valueSuffix: '%'
     },
     plotOptions: {
         bar: {
@@ -52,16 +64,9 @@ function plot_feature_importances() { Highcharts.chart('features', {
     },
     series: [{
         name: 'Year 1800',
-        data: [107, 31, 635, 203, 2]
-    }, {
-        name: 'Year 1900',
-        data: [133, 156, 947, 408, 6]
-    }, {
-        name: 'Year 2000',
-        data: [814, 841, 3714, 727, 31]
-    }, {
-        name: 'Year 2016',
-        data: [1216, 1001, 4436, 738, 40]
+        data: [0.03829766, 0.04532762, 0.04681443, 0.0476799 , 0.05105438,
+       0.05589548, 0.06334201, 0.06851336, 0.07458614, 0.11197423,
+       0.1132997 , 0.11746197, 0.16575313]
     }]
 })};
 
