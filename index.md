@@ -139,6 +139,24 @@ Scroll over each level to learn more about how a decision tree works!
 
 Our model achieves an accuracy of **96.4%**.
 
+### Feature Descriptions
+
+| Feature      | Description |
+| ----------- | ----------- |
+| 'smoothed_mean_delay_10s'      | Mean of inter-packet delay (difference in arrival time of previous and next packet) over rolling windows of 10 seconds       |
+| 'upload_bytes_cv'   | The Upload Byte coefficient of variation is the ratio of the standard deviation to the mean, 𝛔/𝝻, of the uploaded byte rates         |
+| 'sent_mean_size'      | The mean upload packet size is calculated by taking the sum of the upload packet size over the total amount of packets to get the average packet size.|
+| 'smoothed_mean_delay_60s'   | Mean of inter-packet delay (difference in arrival time of previous and next packet) over rolling windows of 60 seconds        |
+| 'received_small_prop'      | Ratio of small downloaded packets (<200 bytes) over all downloaded packets       |
+| 'received_large_prop'   | Ratio of large downloaded packets (>1200 bytes) over all downloaded packets        |
+| 'received_mean_size'      | Mean packet size of all downloaded packets       |
+| 'large_packet_ratio'   | The ratio of the count of uploaded packet sizes in the size range of 1200+ bytes and the overall total number of packets. This feature is calculated over the entire dataset collected.         |
+| 'sent_small_prop'      | Ratio of small uploaded packets (<200 bytes) over all uploaded packets       |
+| 'max_frequency_prominence'   | Using Welch’s method to compute the power spectral density of downloaded packets, transformed into amplitude spectral density, then calculating the magnitude of the peak (in bytes) at the most prominent frequency (Hz)        |
+| 'small_packet_ratio'      | The ratio of the count of uploaded packet sizes in the size range of 0-200 bytes and the overall total number of packets. This feature is calculated over the entire dataset collected.        |
+| 'download_bytes_cv'   | The Download Byte coefficient of variation is the ratio of the standard deviation to the mean, 𝛔/𝝻, of the downloaded byte rates        |
+| 'medium_packet_ratio'      | The ratio of the count of uploaded packet sizes in the size range of 200-400 bytes and the overall total number of packets. This feature is calculated over the entire dataset collected.        |
+
 <figure class="highcharts-figure" onload="init()">
     <div id="features"></div>
     <p class="highcharts-description">
