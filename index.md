@@ -211,11 +211,11 @@ We also hypothesizes that because Twitch is owned by Amazon, Twitch would exhibi
 
 <div class="logos">
  
-<img src="/streaming_provider_classifier_inside_vpn/assets/peacock.jpg" height="200" >
+<img src="/streaming_provider_classifier_inside_vpn/assets/peacock.png" height="200" >
 
-<img src="/streaming_provider_classifier_inside_vpn/assets/hbomax.jpg" height="200" >
+<img src="/streaming_provider_classifier_inside_vpn/assets/hbomax.png" height="200" >
 
-<img src="/streaming_provider_classifier_inside_vpn/assets/playpack.png" height="200" >
+<img src="/streaming_provider_classifier_inside_vpn/assets/playback.png" height="200" >
 </div>
 
 - Currently our data only consist of 1x playback speed and was recorded in a clean setting, meaning there was no other data being sent or recieved, such as with messages or other browsing. We can make it more robust by adding more playback speeds and introducing noisy data into our dataset 
