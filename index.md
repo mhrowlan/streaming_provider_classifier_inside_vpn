@@ -27,6 +27,8 @@
 
 ## Project Purpose
 Over the past two quarters, we have been working with Viasat to understand internet traffic across a VPN. Last quarter, we worked on creating a classifier that was able to idenitify if video was being streamed on a VPN or there was just normal browsing occuring. This prompted our group to take this previous classifier a step further to identify what streaming service provider is being used. With the baseline of identifying video, knowing the service provider provides another layer of information that is valuable for Viasat. 
+<img src="/streaming_provider_classifier_inside_vpn/assets/viasat-purpose.png" height="200" >
+
 ### When might this information be used?
 When it comes to classifying which streaming service provider is being used in a VPN, there are many reasons to collect it. In working with Viasat, their goal as an Internet Service Provider is to offer the best quality experience for their customers. So if they set certain network parameters in place, such as max download rates, certain providers could be more heavily affected. By studying the network patterns of some different service providers and making a tool to classify them, this information can be used to help tune network parameters to optimize streaming for their clients. 
 
