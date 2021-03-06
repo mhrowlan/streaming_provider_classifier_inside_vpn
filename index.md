@@ -78,15 +78,15 @@ class = "tabchange"
 	<p>Click on the boxes to explore data analysis of each provider.</p>
 	
 
-  <label FOR="C1"></label>
+  <label FOR="C1">
 	<p style="font-size: x-large;"> Upload Bytes</p>
   <input type="Checkbox" id="C1" Value="Upload Bytes" onclick="uploadappear();">
-    
+    </label>
 
-   <label FOR="C2"></label>
+   <label FOR="C2">
    <p style="font-size: x-large;"> Download Bytes</p>
    <input type="Checkbox" id="C2" Value="Download Bytes" onclick="downloadappear();">
-      
+      </label>
    <div style="line-height:10px;"></div> 
       
    <p id="text1" style="display:none">
