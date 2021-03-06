@@ -103,7 +103,7 @@ Click on the boxes to explore data analysis of each provider.
  For the live video streaming providers, in Twitch Live there is an extremely large amount of bytes downloaded regularly. 
 In Youtube Live, the bytes are regular although in smaller quantities. 
 				
-</p>
+
 				
 <div style="line-height:10px;"></div> 
 
@@ -126,7 +126,7 @@ For Youtube, the data displays irregularities.
 For the live video streaming providers, in Twitch Live when compared to the download graphs, it is very similar but in smaller quantities. 
 In the streaming provider of Youtube Live, the bytes are constantly being sent in small amounts. 
       
-   </p>
+
 </section>
 
 
