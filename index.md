@@ -129,6 +129,7 @@ Click on the boxes to explore data analysis of each provider.
       
    
 </p>
+</section>
 
 
 ### Comparing the Packet Size Frequencies
