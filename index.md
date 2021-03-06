@@ -84,10 +84,10 @@ Click on the boxes to explore data analysis of each provider.
    <label FOR="C2"><p style="font-size: x-large;"> Download Bytes
    <input type="Checkbox" id="C2" Value="Download Bytes" onclick="downloadappear();">
       
-   <div style="line-height:10px;"><br></div> 
+   <div style="line-height:10px;"></div> 
       
    <p id="text1" style="display:none"><b style="font-size: large;">Upload Bytes: Data Analysis</b>
-   <br><br>
+   	<br>
 	<img src="/streaming_provider_classifier_inside_vpn/assets/prime_upload.png" width="300" >
     	<img src="/streaming_provider_classifier_inside_vpn/assets/netflix_upload.png" width="300" >
     	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_upload.png" width="300" >
@@ -96,17 +96,16 @@ Click on the boxes to explore data analysis of each provider.
     	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_live_upload.png" width = "300">
 	<br>
  In the graphs above, it is visible how the flow of download bytes have a unique pattern in each provider. For the 
-        on demand streaming providers, we have Netflix, Amazon Prime and Youtube.
-        For example, in Netflix there is a regularity in time within the bytes and the bytes are constant. 
-        In Amazon Prime the time is continuous yet the bytes are irregular.
-      For Youtube, the data shows the regularity in both time and bytes, although there are sudden interruptions. 
-     
-  For the live video streaming providers, in Twitch Live there is an extremely large amount of bytes downloaded regularly. In 
-        Youtube Live, the bytes are regular although in smaller quantities. 
+ on demand streaming providers, we have Netflix, Amazon Prime and Youtube.
+ For example, in Netflix there is a regularity in time within the bytes and the bytes are constant. 
+ In Amazon Prime the time is continuous yet the bytes are irregular.
+ For Youtube, the data shows the regularity in both time and bytes, although there are sudden interruptions. 
+ For the live video streaming providers, in Twitch Live there is an extremely large amount of bytes downloaded regularly. 
+In Youtube Live, the bytes are regular although in smaller quantities. 
 				
 </p>
 				
- <div style="line-height:10px;"><br></div> 
+<div style="line-height:10px;"></div> 
 
 
   <p id="text2" style="display:none"><b style="font-size: large;">Download Bytes: Data Analysis</b>
@@ -118,17 +117,16 @@ Click on the boxes to explore data analysis of each provider.
     	<img src="/streaming_provider_classifier_inside_vpn/assets/twitch_live_download.png" width="275" >
     	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_live_download.png" width="275">
 	<br>
-          In the graphs above, it is visible how the flow of upload bytes have the key difference of spike frequency and dimensionality of the spikes. 
-          For the on demand streaming providers, we have Netflix, Amazon Prime and Youtube.
-        For Netflix there are large sporadic spikes that occur often. 
-        In Amazon Prime spikes have a very common pattern of occurring about every 75 seconds.
-      For Youtube, the data displays irregularities. 
+In the graphs above, it is visible how the flow of upload bytes have the key difference of spike frequency and dimensionality of the spikes. 
+For the on demand streaming providers, we have Netflix, Amazon Prime and Youtube.
+For Netflix there are large sporadic spikes that occur often. 
+In Amazon Prime spikes have a very common pattern of occurring about every 75 seconds.
+For Youtube, the data displays irregularities. 
      
- For the live video streaming providers, in Twitch Live when compared to the download graphs, it is very similar but in smaller quantities. 
-      In the streaming provider of Youtube Live, the bytes are constantly being sent in small amounts. 
+For the live video streaming providers, in Twitch Live when compared to the download graphs, it is very similar but in smaller quantities. 
+In the streaming provider of Youtube Live, the bytes are constantly being sent in small amounts. 
       
-   
-</p>
+   </p>
 </section>
 
 
