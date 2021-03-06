@@ -129,7 +129,7 @@ Click on the boxes to explore data analysis of each provider.
       
    
 </p>
-</section>
+
 
 ### Comparing the Packet Size Frequencies
 One of the features we looked at was packet frequency. In the chart below, we can see the range of size and frequency for each provider. The chart is normalized for ease of reading, so each provider's ratio is out of 1. 
