@@ -1,7 +1,6 @@
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .logos {
-	
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -32,7 +31,6 @@
 }
 
 .highcharts-data-table table {
-font-family: Verdana, sans-serif;
 border-collapse: collapse;
 border: 1px solid #EBEBEB;
 margin: 10px auto;
