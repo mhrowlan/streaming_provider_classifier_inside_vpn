@@ -266,6 +266,9 @@ We also hypothesize that because Twitch is owned by Amazon, Twitch would exhibit
 
 ## Takeaways
 - We were able to make a model that classified the providers with 96.5% accuracy! We were able to acheive this through selecting a good model and creating informative features that allowed for high precision in identifying the providers. 
+- The features we selected for our model worked well in making classification based on the various differences between different providers. 
+- The features are also generalizable such that the classification is not merely dependent on some features fitted exactly to the streaming providers which we have in our training data. They works well when we incorporate more providers and even live streaming providers like Youtube live and Twitch live, whose internet data patterns look very different from the providers we already included. 
+- We have identified the limitations of our project, which can be addressed and improved in the future by ISPs(Internet Service Providers) like Viasat to improve their services.
  
 # Thank you for reading!
 
