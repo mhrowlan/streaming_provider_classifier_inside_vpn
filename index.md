@@ -117,12 +117,12 @@ In Youtube Live, the bytes are regular although in smaller quantities.
 	<b style="font-size: large;">Download Bytes: Data Analysis</b>
       <br>
 	<br>
-	<img src="/streaming_provider_classifier_inside_vpn/assets/prime_download.png" width="275" >
-    	<img src="/streaming_provider_classifier_inside_vpn/assets/netflix_download.png" width="275" >
-    	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_download.png" width="275" >
+	<img src="/streaming_provider_classifier_inside_vpn/assets/prime_download.png" width="255" >
+    	<img src="/streaming_provider_classifier_inside_vpn/assets/netflix_download.png" width="255" >
+    	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_download.png" width="255" >
 	<br>
-    	<img src="/streaming_provider_classifier_inside_vpn/assets/twitch_live_download.png" width="275" >
-    	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_live_download.png" width="275">
+    	<img src="/streaming_provider_classifier_inside_vpn/assets/twitch_live_download.png" width="255" >
+    	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_live_download.png" width="255">
 	<br>
 	In the graphs above, it is visible how the flow of upload bytes have the key difference of spike frequency and dimensionality of the spikes. 
 For the on demand streaming providers, we have Netflix, Amazon Prime and Youtube.
