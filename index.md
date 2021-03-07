@@ -264,11 +264,13 @@ We also hypothesize that because Twitch is owned by Amazon, Twitch would exhibit
 
 - Currently our model can only identify the 5 streaming providers against another class. However, we did initally begin with Netflix, Youtube, and Amazon Prime against an other class. With the addition of Twitch and Youtube Live, we believe the features are generalizable to other providers. This could be confirmed by training the model on more providers. Many more providers are entering the market such as Peacock from NBC, Paramount+, CBS All Access and many more. It will be beneficial for Viasat to understand how these many different providers send data across a VPN, and our model is an awesome tool to do that with!
 
+- For future work, ethical considerations are to be addressed since people use VPN to get a secure and private internet connection and this project is potentially capable of revealing the internet behaviors of the users. Even though this project aims to help ISPs(Internet Service Providers) improve their users' streaming experience, acquiring the users' consent on their data first or using other approaches to make sure the users are secure and their privacies are protected is crucial for this project to be exempt from ethical worries. 
+
 ## Takeaways
 - We were able to make a model that classified the providers with 96.5% accuracy! We were able to acheive this through selecting a good model and creating informative features that allowed for high precision in identifying the providers. 
 - The features we selected for our model worked well in making classification based on the various differences between different providers. 
 - The features are also generalizable such that the classification is not merely dependent on some features fitted exactly to the streaming providers which we have in our training data. They works well when we incorporate more providers and even live streaming providers like Youtube live and Twitch live, whose internet data patterns look very different from the providers we already included. 
-- We have identified the limitations of our project, which can be addressed and improved in the future by ISPs(Internet Service Providers) like Viasat to improve their services.
+- We have identified the limitations of our project, which can be addressed and improved in the future by ISPs like Viasat to improve their services.
  
 # Thank you for reading!
 
