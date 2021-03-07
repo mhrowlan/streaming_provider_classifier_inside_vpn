@@ -123,12 +123,14 @@ In Youtube Live, the bytes are regular although in smaller quantities.
       <br>
 	<br>
 	On Demand Streaming Providers:
+	<br>
 	<img src="/streaming_provider_classifier_inside_vpn/assets/prime_download.png" width="225" >
     	<img src="/streaming_provider_classifier_inside_vpn/assets/netflix_download.png" width="225" >
     	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_download.png" width="225" >
 	<br>
 	<br>
 	Live Video Streaming Providers:
+	<br>
     	<img src="/streaming_provider_classifier_inside_vpn/assets/twitch_live_download.png" width="255" >
     	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_live_download.png" width="255">
 	<br>
