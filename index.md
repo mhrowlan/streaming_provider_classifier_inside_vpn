@@ -147,7 +147,7 @@ In the streaming provider of Youtube Live, the bytes are constantly being sent i
 </div>
 
 ### Comparing the Packet Size Frequencies
-One of the features we looked at was packet frequency. In the chart below, we can see the range of size and frequency for each provider. The chart is normalized for ease of reading, so each provider's ratio is out of 1. 
+One of the features we explored was packet size frequency between the streaming providers. In the chart below, we can see the range of size and frequency for each provider. The chart is normalized for ease of reading, so each provider's ratio is out of 1. 
 
 <figure class="highcharts-figure" onload="init()">
     <div id="container"></div>
