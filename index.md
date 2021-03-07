@@ -101,8 +101,8 @@ An initial approach when looking at unique patterns between the different stream
 	<br>
 	Live Video Streaming Providers:
 	<br>
-    	<img src="/streaming_provider_classifier_inside_vpn/assets/twitch_upload.png" width="225" >
-    	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_live_upload.png" width = "225">
+    	<img src="/streaming_provider_classifier_inside_vpn/assets/twitch_upload.png" width="255" >
+    	<img src="/streaming_provider_classifier_inside_vpn/assets/youtube_live_upload.png" width = "255">
 	<br>
 	In the graphs above, it is visible how the flow of upload bytes have the key difference of spike frequency and dimensionality of the spikes. 
 For the on demand streaming providers, we have Netflix, Amazon Prime and Youtube.
