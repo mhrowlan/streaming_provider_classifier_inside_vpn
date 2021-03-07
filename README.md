@@ -104,4 +104,4 @@ Can optionally specify targets after test to only run that target. For example `
 
 ## Report
 
-An academic report on the exploration and model built in this repository can be found at [`references/report.pdf`](references/report.pdf)
+An academic report on the exploration and model built in this repository can be found at [`references/report.pdf`](references/report.pdf) Does Not Exist
