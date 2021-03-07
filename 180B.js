@@ -186,29 +186,29 @@ function plotcolumn() {  Highcharts.chart('container', {
     },
 
     series: [{
-        name: 'Amazon Prime',
-			data: [0.293, 0.160, 0.081, 0.005, 0.006, 0.003, 0.425, 0.027],
-			color: 'blue'
-    }, {
-        name: 'Youtube Live',
-		  data:  [0.565, 0.004, 0.011, 0.002, 0.004, 0.002, 0.412, 0.000],
-		  color: 'red'
-    }, {
-       name: 'Twitch',
-		data: [0.217, 0.024, 0.055, 0.023, 0.016, 0.013, 0.651, 0.000],
-		color: 'purple'
-    },{
 	  name: 'Netflix',
 	  data: [0.295, 0.042, 0.027, 0.007, 0.006, 0.002, 0.615, 0.006],
 	  color: 'darkred'
   
-	},
-	{
+	},{
+        name: 'Amazon Prime',
+	data: [0.293, 0.160, 0.081, 0.005, 0.006, 0.003, 0.425, 0.027],
+	color: 'blue'
+    },{
 	  name: 'Youtube',
 	  data: [0.121, 0.013, 0.044, 0.006, 0.058, 0.005, 0.753, 0.000],
 	  color: 'rgb(225,15,0)'
   
-	}
+	}, {
+       name: 'Twitch',
+	data: [0.217, 0.024, 0.055, 0.023, 0.016, 0.013, 0.651, 0.000],
+	color: 'purple'
+    },
+	{
+        name: 'Youtube Live',
+		  data:  [0.565, 0.004, 0.011, 0.002, 0.004, 0.002, 0.412, 0.000],
+		  color: 'red'
+    }
     ]})};
 function removeside(){
 	var sidebar= document.getElementById("sidebar")
